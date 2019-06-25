@@ -1,0 +1,1 @@
+{"version":3,"file":"static/webpack/static/development/pages/shop-freck.js.8d610b259df98b4db804.hot-update.js","sources":["webpack:///./pages/shop-freck.js"],"sourcesContent":["export default function ShopFreck() {\n  return <div>This the Shop Freck Page</div>;\n};"],"mappings":";;;;;;;;;;;;;;;;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACA;AAAA;;;;A","sourceRoot":""}

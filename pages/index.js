@@ -1,5 +1,3 @@
-function Index() {
-  return <div>Hi, Freck Fam!</div>;
+export default function Index() {
+  return <div>Hi, Freck Fam! This is the home page.</div>;
 };
-
-export default Index;

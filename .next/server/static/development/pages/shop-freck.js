@@ -88,46 +88,46 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/shop-freck.js":
+/*!*****************************!*\
+  !*** ./pages/shop-freck.js ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ShopFreck; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/milcahcenteno/freck/freck-next/pages/index.js";
+var _jsxFileName = "/Users/milcahcenteno/freck/freck-next/pages/shop-freck.js";
 
-function Index() {
+function ShopFreck() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 2
     },
     __self: this
-  }, "Hi, Freck Fam! This is the home page.");
+  }, "This the Shop Freck Page");
 }
 ;
 
 /***/ }),
 
-/***/ 4:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/***/ 6:
+/*!***********************************!*\
+  !*** multi ./pages/shop-freck.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/milcahcenteno/freck/freck-next/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/milcahcenteno/freck/freck-next/pages/shop-freck.js */"./pages/shop-freck.js");
 
 
 /***/ }),
@@ -144,4 +144,4 @@ module.exports = require("react");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=shop-freck.js.map
