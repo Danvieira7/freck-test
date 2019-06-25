@@ -88,46 +88,46 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/cart.js":
+/***/ "./pages/blog.js":
 /*!***********************!*\
-  !*** ./pages/cart.js ***!
+  !*** ./pages/blog.js ***!
   \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Cart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Blog; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/milcahcenteno/freck/freck-next/pages/cart.js";
+var _jsxFileName = "/Users/milcahcenteno/freck/freck-next/pages/blog.js";
 
-function Cart() {
+function Blog() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 2
     },
     __self: this
-  }, "This the Cart Page");
+  }, "This the Blog Page");
 }
 ;
 
 /***/ }),
 
-/***/ 10:
+/***/ 8:
 /*!*****************************!*\
-  !*** multi ./pages/cart.js ***!
+  !*** multi ./pages/blog.js ***!
   \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/milcahcenteno/freck/freck-next/pages/cart.js */"./pages/cart.js");
+module.exports = __webpack_require__(/*! /Users/milcahcenteno/freck/freck-next/pages/blog.js */"./pages/blog.js");
 
 
 /***/ }),
@@ -144,4 +144,4 @@ module.exports = require("react");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=cart.js.map
+//# sourceMappingURL=blog.js.map

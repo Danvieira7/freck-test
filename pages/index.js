@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Index() {
   return (
@@ -13,7 +14,9 @@ function Index() {
           <br />
           Cactus Collection
         </h2>
-        <button>Shop</button>
+        <Link href="shop-freck">
+          <button>Shop</button>
+        </Link>
       </div>
       <div id="freck">
         <h2>
@@ -25,8 +28,11 @@ function Index() {
         <h2>
         Ooze
         </h2>
-        <button>Read the blog</button>
+        <Link href="blog">
+          <button>Read the blog</button>
+        </Link>
       </div>
+      <Footer />
       <style jsx>{`
         p {
           padding: 10px;
