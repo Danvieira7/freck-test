@@ -1,1 +1,0 @@
-{"version":3,"file":"static/webpack/static/development/pages/index.js.5d05570cfe68ce12be64.hot-update.js","sources":["webpack:///./pages/index.js"],"sourcesContent":["export default function Index() {\n  return <div>Hi, Freck Fam!</div>;\n};\n\n Index;"],"mappings":";;;;;;;;;;;;;;;;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACA;AAAA;AAEA;;;;A","sourceRoot":""}
