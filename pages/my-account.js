@@ -1,3 +1,10 @@
+import Header from '../components/Header';
+
 export default function MyAccount() {
-  return <div>This the Customer Account Dashboard Page</div>;
+  return (
+    <div>
+      <Header />      
+      This the Customer Account Dashboard Page
+    </div>
+    );
 };

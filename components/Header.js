@@ -3,13 +3,13 @@ import Link from 'next/link';
 function Header() {
   return (
     <div>
-      <Link href="index">
+      <Link href="/">
         <a>
           <img src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" />
         </a>
       </Link>
       <span>
-        <Link href="index">
+        <Link href="/">
           <a>Home</a>
         </Link>
         <Link href="shop-freck">

@@ -1,3 +1,10 @@
+import Header from '../components/Header';
+
 export default function Cart() {
-  return <div>This the Cart Page</div>;
+  return (
+    <div>
+      <Header />
+      This the Cart Page
+    </div>
+  );
 };
