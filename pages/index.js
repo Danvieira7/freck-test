@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import HomeHero from '../components/HomeHero'
-import CactusSection from '../components/CactusSection'
-import FreckSection from '../components/FreckSection'
+import React, {Component} from 'react';
+import HomeHero from '../components/HomeHero';
+import CactusSection from '../components/CactusSection';
+import FreckSection from '../components/FreckSection';
 import OozeSection from '../components/OozeSection'
 import Footer from '../components/Footer';
 
