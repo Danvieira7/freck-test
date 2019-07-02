@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Link from 'next/link';
-
 class PostList extends Component {
   constructor(props) {
     super(props);
@@ -26,21 +25,15 @@ class PostList extends Component {
   render() {
     return (
       <div>
+        This is the Blog page
         {this.state.posts.map(post => (
-          <div className="card" key={post.id}>
+          <Link to={`/${post.slug}`} key={post.id}>
+            <div className="card" key={post.id}>
               <div className="card-content">
-                <Link href={`/${post.slug}`} key={post.id}>
-                  <a>
-                    <h3>{post.title.rendered}</h3>
-                  </a>
-                </Link>
-                <div
-                  dangerouslySetInnerHTML={this.createMarkup(
-                    post.excerpt.rendered
-                  )}
-                />
+                <h3>{post.title.rendered}</h3>
               </div>
             </div>
+          </Link>
         ))}
       </div>
     );

@@ -1,9 +1,9 @@
-import Header from './Header';
+import HomeHeader from './HomeHeader';
 
 export default function HomeHero() {
   return (
   <div>
-    <Header />
+    <HomeHeader />
     <style jsx>{`
         div {
           background: url('https://freckbeauty.com/wp-content/uploads/2018/11/hero-home-2.jpg');

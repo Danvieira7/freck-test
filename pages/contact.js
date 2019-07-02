@@ -1,10 +1,10 @@
-import Header from '../components/Header';
+import HomeHeader from '../components/HomeHeader';
 import Footer from '../components/Footer';
 
 export default function Contact() {
   return (
   <div>
-    <Header />
+    <HomeHeader />
     This is the Contact page
     <Footer />
   </div>

@@ -1,10 +1,10 @@
-import Header from '../components/Header';
+import HomeHeader from '../components/HomeHeader';
 import Footer from '../components/Footer';
 
 export default function About() {
   return (
     <div>
-      <Header />  
+      <HomeHeader />  
       This the About Page
       <Footer />
     </div>
