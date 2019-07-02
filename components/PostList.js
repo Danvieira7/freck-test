@@ -25,7 +25,7 @@ class PostList extends Component {
   render() {
     return (
       <div>
-        This is the Blog page
+        This is the Post List within the Blog Page
         {this.state.posts.map(post => (
           <Link to={`/${post.slug}`} key={post.id}>
             <div className="card" key={post.id}>

@@ -4,10 +4,10 @@ const app = express();
 const port = 300;
 const dev = process.env.NODE_ENV !== 'production';
 const handle = app.getRequestHandler();
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 require('dotenv').config();
 
