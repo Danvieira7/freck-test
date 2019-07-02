@@ -1,10 +1,10 @@
-import HomeHeader from '../components/HomeHeader';
+import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer';
 
 export default function ShopFreck() {
   return (
   <div>
-    <HomeHeader />
+    <MainHeader />
     <div className="hero">
       <div>
         <img src="https://freckbeauty.com/wp-content/uploads/2018/11/shop-header-left.jpg" />
