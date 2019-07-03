@@ -4,7 +4,7 @@ export default function Ooze() {
   return (
     <div>
       <h2>
-      Ooze
+        Ooze
       </h2>
       <Link href="blog">
         <button>Read the blog</button>

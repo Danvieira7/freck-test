@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import HomeHero from '../components/HomeHero';
-import CactusSection from '../components/CactusSection';
-import FreckSection from '../components/FreckSection';
-import OozeSection from '../components/OozeSection'
+import HomeHero from '../components/Home/HomeHero';
+import CactusSection from '../components/Home/CactusSection';
+import FreckSection from '../components/Home/FreckSection';
+import OozeSection from '../components/Home/OozeSection'
 import Footer from '../components/Footer/Footer';
 
 function Index() {

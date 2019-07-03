@@ -4,7 +4,7 @@ export default function FreckSection() {
   return (
     <div>
       <h2>
-      The Original Freckle Cosmetic
+        The Original Freckle Cosmetic
       </h2>
       <button>Purchase</button>
       <style jsx>{`

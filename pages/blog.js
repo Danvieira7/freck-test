@@ -1,11 +1,11 @@
-import HomeHeader from '../components/HomeHeader';
+import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer/Footer';
 import PostList from '../components/PostList';
 
 export default function Blog() {
   return (
     <div>
-      <HomeHeader />
+      <MainHeader />
       <PostList />
       <Footer />
     </div>
