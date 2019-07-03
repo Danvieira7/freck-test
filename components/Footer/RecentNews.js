@@ -11,7 +11,7 @@ class RecentNews extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts").then(posts => {
+    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts?_embed").then(posts => {
       this.setState({
         posts: posts.data.slice(0, 4)
       });
@@ -24,25 +24,41 @@ class RecentNews extends Component {
 
   render() {
     return (
-    <div id="recent-news">
+    <div>
       RECENT NEWS
       {this.state.posts.map(post => (
         <div className="card" key={post.id}>
-            <div className="card-content">
           <Link href={post.slug} key={post.id}>
-              <a>
-                <h3>{post.title.rendered}</h3>
-              </a>
+            <a>
+              <div id="news-container">
+                <div id="img-container">
+                  <img src={post._embedded['wp:featuredmedia']['0'].source_url} />
+                </div>
+                <div id="title-container">
+                  {post.title.rendered}
+                </div>
+              </div>
+            </a>
           </Link>
-            </div>
-          </div>
+        </div>
       ))}
       <style jsx>{`
-        #recent-news {
-          height: 100%;
-        }
         a {
           color: #fff
+        }
+        #news-container {
+          display: flex;
+        }
+        #img-container {
+          min-width: 75px;
+          max-width: 75px;
+          height: 75px;
+          overflow: hidden;
+        }
+        #title-container {
+        } 
+        img {
+          height: 75px;
         }
       `}</style>
     </div>
