@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Link from 'next/link';
+import FooterOptIn from './FooterOptIn';
+import FooterNav from './FooterNav';
+import RecentNews from './RecentNews';
 
 class Footer extends Component {
   constructor(props) {
@@ -26,57 +29,22 @@ class Footer extends Component {
   render() {
     return (
     <div id="container">
-      <div id="uno">
-        <h3>Enter the Freck Fam</h3>
-        <br/>
-        <p>We send email updates on stuff you'll probably want to know about: new products, promos, international shipping, parties, travel guides, & playlists. Welcome to the Freck Fam.</p>
-        <form action="/signup" method="POST">
-            <div className="form-group">
-                <label className="form-label" htmlFor="firstname">First Name</label>
-                <input className="form-input" type="text" name="firstname" id="firstname"/>
-            </div>
-            <div className="form-group">
-                <label className="form-label" htmlFor="lastname">Last Name</label>
-                <input className="form-input" type="text" name="lastname" id="lastname"/>
-            </div>
-            <div className="form-group">
-                <label className="form-label" htmlFor="email">Email</label>
-                <input className="form-input" type="text" name="email" id="email"/>
-            </div>
-            <input type="submit" value="JOIN"/>
-        </form>
+      <div>
+        <FooterOptIn />
       </div>
-      <div id="dos">
-        This is the center div will all the links.
+      <div>
+        <FooterNav />
       </div>
-      <div id="tres">
-        RECENT NEWS
-        {this.state.posts.map(post => (
-          <div className="card" key={post.id}>
-              <div className="card-content">
-            <Link href={post.slug} key={post.id}>
-                <a>
-                  <h3>{post.title.rendered}</h3>
-                </a>
-            </Link>
-              </div>
-            </div>
-        ))}
+      <div>
+        <RecentNews />
       </div>
       <style jsx>{`
         #container {
           display: grid;
           grid-template-rows: 25% 50% 25%;
           grid-template-columns: 25% 50% 25%;
-        }
-        #uno {
-          background-color: lavender;
-        }
-        #dos {
-          background-color: coral;
-        }
-        #tres {
-          background-color: peachpuff;
+          background-color: #1c150f;
+          color: #fff;
         }
       `}</style>
     </div>

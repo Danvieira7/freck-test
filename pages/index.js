@@ -13,6 +13,11 @@ function Index() {
       <FreckSection />
       <OozeSection />
       <Footer />
+    <style global jsx>{`
+      a {
+        text-decoration: none;
+      }
+    `}</style>
     </div>
   );
 };
