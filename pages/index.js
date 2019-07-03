@@ -3,7 +3,7 @@ import HomeHero from '../components/HomeHero';
 import CactusSection from '../components/CactusSection';
 import FreckSection from '../components/FreckSection';
 import OozeSection from '../components/OozeSection'
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 
 function Index() {
   return (

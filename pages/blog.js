@@ -1,5 +1,5 @@
 import HomeHeader from '../components/HomeHeader';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 import PostList from '../components/PostList';
 
 export default function Blog() {

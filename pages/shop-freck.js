@@ -1,5 +1,5 @@
 import MainHeader from '../components/MainHeader';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 
 export default function ShopFreck() {
   return (

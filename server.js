@@ -23,33 +23,6 @@ const WooCommerce = new WooCommerceAPI({
 	queryStringAuth: true
 });
 
-// const dataCenter = process.env.DATA_CENTER,
-//       listId            = process.env.MAILING_LIST_ID
-//       mailchimpApiKey   = process.env.MAILCHIMP_API_KEY
-
-// //routes
-// app.post('/signup', function (req, res) {
-	//   request
-	//     .post(`https://${dataCenter}.api.mailchimp.com/3.0/lists/${listId}/members/`)
-	//     .set('Content-Type', 'application/json;charset=utf-8')
-	//     .set('Authorization', 'Basic ' + Buffer.from(`any: ${dataCenter}`).toString('base64'))
-	//     .send({
-		//       'email_address': req.body.email,
-		//       'status': 'subscribed',
-		//       'merge_fields': {
-			//         'FNAME': req.body.firstname,
-//         'LNAME': req.body.lastname
-//       }
-//     })
-//     .end(function(err, response) {
-//       if (response.status < 300 || (response.status === 400 && response.body.title === 'Member exists.')) {
-//         res.send('Success! :D Signed up!');
-//       } else {
-//         res.send(`Sign up failed :'(`);
-//       }
-//     })
-// })
-
 app
   .prepare()
 	.then(() => {

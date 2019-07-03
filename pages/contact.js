@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import HomeHeader from '../components/HomeHeader';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 
 class Contact extends Component {
   state = {

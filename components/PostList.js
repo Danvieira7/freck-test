@@ -27,13 +27,15 @@ class PostList extends Component {
       <div>
         This is the Post List within the Blog Page
         {this.state.posts.map(post => (
-          <Link to={`/${post.slug}`} key={post.id}>
-            <div className="card" key={post.id}>
+          <div className="card" key={post.id}>
               <div className="card-content">
-                <h3>{post.title.rendered}</h3>
+            <Link href={post.slug} key={post.id}>
+                <a>
+                  <h3>{post.title.rendered}</h3>
+                </a>
+            </Link>
               </div>
             </div>
-          </Link>
         ))}
       </div>
     );
