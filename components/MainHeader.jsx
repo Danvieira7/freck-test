@@ -1,8 +1,13 @@
 import Link from 'next/link';
+import Head from 'next/head';
+import Favicon from './Favicon';
 
 function MainHeader() {
   return (
     <div>
+      <Head>
+        <Favicon />
+      </Head>
       <Link href="/">
         <a>
           <img src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" />

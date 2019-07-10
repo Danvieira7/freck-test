@@ -17,32 +17,32 @@ class Contact extends Component {
       <div>
         <MainHeader />
         <form className="contact-form" onSubmit={(e) => this.formSubmit(e)}>
-          <label class="message-name" htmlFor="message-name">
+          <label className="message-name" htmlFor="message-name">
             Name *
           </label>
           <br />
-          <input name="name" class="message-name" type="text" placeholder="Remi" required />
+          <input name="name" className="message-name" type="text" placeholder="Remi" required />
           <br />
           <br />
-          <label class="message-email" htmlFor="message-email">
+          <label className="message-email" htmlFor="message-email">
             Email *
           </label>
           <br />
-          <input name="email" class="message-email" type="email" placeholder="your@email.com" required />
+          <input name="email" className="message-email" type="email" placeholder="your@email.com" required />
           <br />
           <br />
-          <label class="message-email" htmlFor="message-email">
+          <label className="message-email" htmlFor="message-email">
             Phone
           </label>
           <br />
-          <input name="phone" class="phone" type="phone" placeholder="213-123-4567" required />
+          <input name="phone" className="phone" type="phone" placeholder="213-123-4567" required />
           <br />
           <br />
-          <label class="message" htmlFor="message-input">
+          <label className="message" htmlFor="message-input">
             Message*
           </label>
           <br />
-          <textarea name="message" class="message-input" type="text" placeholder="Please write your message here" required />
+          <textarea name="message" className="message-input" type="text" placeholder="Please write your message here" required />
           <br />
           <br />
           <div>

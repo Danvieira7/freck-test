@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Favicon from '../Favicon';
 
 function HomeHeader() {
   return (
@@ -7,6 +8,7 @@ function HomeHeader() {
       <Head>
         <title>Freck | The Original Faux Freckles</title>
         <meta name="description" content="change me: description for indexing bots" />
+        <Favicon />
       </Head>
       <Link href="/">
         <a>

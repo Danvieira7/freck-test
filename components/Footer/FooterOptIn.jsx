@@ -23,6 +23,8 @@ class FooterOptIn extends Component {
     }
 
     try {
+      // add custom function here
+
       if (this.state) {
         this.state.value = '';
       }
