@@ -1,8 +1,13 @@
 import Link from 'next/link';
+import Head from 'next/head';
 
 function HomeHeader() {
   return (
     <div>
+      <Head>
+        <title>Freck | The Original Faux Freckles</title>
+        <meta name="description" content="change me: description for indexing bots" />
+      </Head>
       <Link href="/">
         <a>
           <img src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" />
