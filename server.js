@@ -1,7 +1,7 @@
 const express = require('express');
 const next = require('next');
 const app = express();
-const port = 300;
+const port = 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const handle = app.getRequestHandler();
 const bodyParser = require('body-parser');
@@ -19,7 +19,7 @@ const WooCommerce = new WooCommerceAPI({
 	consumerKey: wooApi.consumerKey,
 	consumerSecret: wooApi.consumerSecret,
 	wpAPI: true,
-	version: 'wc/v3',
+	version: 'wc/v1',
 	queryStringAuth: true
 });
 
@@ -29,7 +29,7 @@ app
 		const server = express();	
 
 		server.get('/get-products', (req, response) => {
-			WooCommerce.get('products', function(err, data, res) {
+			WooCommerce.getAsync('products', function(err, data, res) {
 				response.json(JSON.parse(res));
 			});
 		});

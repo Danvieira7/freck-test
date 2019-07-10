@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import axios from "axios";
 import Link from 'next/link';
+
 class PostList extends Component {
   constructor(props) {
     super(props);
