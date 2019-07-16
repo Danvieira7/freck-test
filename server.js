@@ -1,13 +1,12 @@
-const express = require('express');
-const next = require('next');
-const app = express();
-const port = 3000;
-const dev = process.env.NODE_ENV !== 'production';
-const handle = app.getRequestHandler();
-const bodyParser = require('body-parser');
+import express from 'express';
+import next from 'next';
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+const dev = process.env.NODE_ENV !== 'production';
+const port = process.env.PORT || 3000;
+const ROOT_URL = dev ? `http://localhost:${port}` : 'https://freckbeauty.com';
+
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
 require('dotenv').config();
 
@@ -26,9 +25,11 @@ const WooCommerce = new WooCommerceAPI({
 app
   .prepare()
 	.then(() => {
-		const server = express();	
+		const server = express();
 
-		server.get('/get-products', (req, response) => {
+		server.use(express.json());
+
+		server.get('/api/products', (req, response) => {
 			WooCommerce.getAsync('products', function(err, data, res) {
 				response.json(JSON.parse(res));
 			});

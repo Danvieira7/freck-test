@@ -18,7 +18,7 @@ class Contact extends Component {
         <MainHeader />
         <form className="contact-form" onSubmit={(e) => this.formSubmit(e)}>
           <label className="message-name" htmlFor="message-name">
-            Name *
+            Name *<link rel="icon" href="https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2018/11/fav.png" />
           </label>
           <br />
           <input name="name" className="message-name" type="text" placeholder="Remi" required />

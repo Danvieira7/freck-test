@@ -14019,7 +14019,15 @@ function (_Component) {
           lineNumber: 20
         },
         __self: this
-      }, "Name *"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
+      }, "Name *", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
+        rel: "icon",
+        href: "https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2018/11/fav.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
@@ -14227,7 +14235,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 4:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact&absolutePagePath=%2FUsers%2Fmilcahcenteno%2Ffreck%2Ffreck-next%2Fpages%2Fcontact.js ***!
   \******************************************************************************************************************************************/
@@ -14250,5 +14258,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact.js.map
