@@ -36,7 +36,7 @@ class RecentNews extends Component {
                   <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="featured post" />
                 </div>
                 <div id="title-container" role="link">
-                  {post.title.rendered}
+                  {post.title.rendered.replace(`&#8217;`, `'`).replace(`&#038;`, '&')}
                 </div>
               </div>
             </a>

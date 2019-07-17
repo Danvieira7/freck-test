@@ -45,7 +45,7 @@ class Ooze extends Component {
                       <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="featured post" />
                     </div>
                     <div id="title-container" role="link">
-                      <p>{post.title.rendered}</p>
+                      <p>{post.title.rendered.replace(`&#8217;`, `'`).replace(`&#038;`, '&')}</p>
                       <p className="category"><i>{post._embedded['wp:term']['0']['0'].name}</i></p>
                     </div>
                   </div>
