@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import axios from "axios";
+import axios from 'axios';
 import Link from 'next/link';
 
 class PostList extends Component {
@@ -12,11 +12,12 @@ class PostList extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts").then(posts => {
-      this.setState({
-        posts: posts.data
+    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts")
+      .then(posts => {
+        this.setState({
+          posts: posts.data
+        });
       });
-    });
   }
 
   createMarkup(html) {
@@ -26,7 +27,6 @@ class PostList extends Component {
   render() {
     return (
       <div>
-        This is the Post List within the Blog Page
         {this.state.posts.map(post => (
           <div className="card" key={post.id}>
               <div className="card-content">

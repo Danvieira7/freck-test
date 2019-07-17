@@ -11,11 +11,12 @@ class RecentNews extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts?_embed").then(posts => {
-      this.setState({
-        posts: posts.data.slice(0, 4)
+    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts?_embed")
+      .then(posts => {
+        this.setState({
+          posts: posts.data.slice(0, 4)
+        });
       });
-    });
   }
 
   createMarkup(html) {

@@ -13,7 +13,7 @@ class ShopFreck extends Component {
     };
   }
 
-  static async getInitialProps () {
+  static async getInitialProps() {
     const res = await fetch(`${server}/api/products`);
     const data = await res.json();
     return {
