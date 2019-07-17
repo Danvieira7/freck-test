@@ -10,13 +10,12 @@ const handle = app.getRequestHandler();
 
 require('dotenv').config();
 
-const wooApi = require('./utilities/wooApi');
 const WooCommerceAPI = require('woocommerce-api');
 
 const WooCommerce = new WooCommerceAPI({
-	url: wooApi.baseUrl,
-	consumerKey: wooApi.consumerKey,
-	consumerSecret: wooApi.consumerSecret,
+	url: process.env.BASE_URL,
+	consumerKey: process.env.KEY,
+	consumerSecret: process.env.SECRET,
 	wpAPI: true,
 	version: 'wc/v1',
 	queryStringAuth: true

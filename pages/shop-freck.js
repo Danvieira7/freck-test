@@ -2,17 +2,18 @@ import React, {Component} from 'react';
 import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer/Footer';
 import fetch from 'isomorphic-unfetch';
-import wooApi from '../utilities/wooApi';
-import Product from '../components/Product';
+import ProductList from '../components/ProductList';
 
-export default class ShopFreck extends Component {
+class ShopFreck extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    
+    };
+  }
 
   static async getInitialProps () {
-    const res = await fetch(`${wooApi.baseUrl}/wp-json/wc/v3/products?consumer_key=${
-      wooApi.consumerKey
-    }&consumer_secret=${
-      wooApi.consumerSecret
-    }`);
+    const res = await fetch(`https://freckbeauty.com/wp-json/wc/v3/products?consumer_key=${process.env.KEY}&consumer_secret=${process.env.SECRET}`);
     const data = await res.json();
     return {
       products: data
@@ -31,11 +32,11 @@ export default class ShopFreck extends Component {
           <div>
           </div>
         </div>
-        <div>
+        <div className="product-container">
           {products.length ? (
             products.map(
               product =>
-              <Product
+              <ProductList
                 product={product}
                 key={product.id}
               />
@@ -49,10 +50,17 @@ export default class ShopFreck extends Component {
             margin-bottom: -5.5px;
           }
           img {
-            width: 55%;
+            max-width: 55%;
+          }
+          .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
           }
         `}</style>
       </div>
     );
   };
 }
+export default ShopFreck;
