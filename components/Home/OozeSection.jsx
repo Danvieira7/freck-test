@@ -27,12 +27,14 @@ class Ooze extends Component {
   render() {
     return (
       <div id="ooze-container">
-        <h2>
-          Ooze
-        </h2>
-        <Link href="blog">
-          <button>Read the blog</button>
-        </Link>
+        <div>
+          <h2>
+            Ooze
+          </h2>
+          <Link href="blog">
+            <button>Read the blog</button>
+          </Link>
+        </div>
         <div id="post-container">
           {this.state.posts.map(post => (
             <div className="card" key={post.id}>
@@ -56,28 +58,32 @@ class Ooze extends Component {
             color: #e4d8c7;
             background-color: #af492f;
             height: 425px;
+            display: flex;
+            justify-content: space-between;
           }
           #post-container {
             display: flex;
             flex-wrap: wrap;
+            flex-direction: row-reverse;
           }
           a {
             color: #fff;
             text-decoration: none;
           }
           #img-container {
-            min-width: 75px;
-            max-width: 75px;
-            height: 75px;
-            overflow: hidden;
+            max-width: 300px;
+            max-height: 300px;
             margin: 10px;
+            overflow: hidden;
+            object-fit: scale-down;
+          }
+          img {
+            width: 150%;
           }
           #title-container {
-            width: 75px;
+            width: 300px;
+            margin-left: 10px;
           } 
-          img {
-            height: 75px;
-          }
         `}</style>
       </div>
     );
