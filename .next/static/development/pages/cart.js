@@ -13963,7 +13963,7 @@ function Cart() {
 
 /***/ }),
 
-/***/ 6:
+/***/ 0:
 /*!************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcart&absolutePagePath=%2FUsers%2Fmilcahcenteno%2Ffreck%2Ffreck-next%2Fpages%2Fcart.js ***!
   \************************************************************************************************************************************/
@@ -13986,5 +13986,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=cart.js.map
