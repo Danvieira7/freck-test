@@ -32,7 +32,7 @@ class PostList extends Component {
               <div className="card-content">
             <Link href={post.slug} key={post.id}>
                 <a>
-                  <h3>{post.title.rendered}</h3>
+                  <h3>{post.title.rendered.replace(`&#8217;`, `'`).replace(`&#038;`, '&')}</h3>
                 </a>
             </Link>
               </div>
