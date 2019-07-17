@@ -14,6 +14,13 @@ function Index() {
       <OozeSection />
       <Footer />
     <style global jsx>{`
+      html, body, * {
+        box-sizing: border-box;
+      }
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
       a {
         text-decoration: none;
       }
