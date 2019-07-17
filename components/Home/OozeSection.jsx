@@ -45,7 +45,8 @@ class Ooze extends Component {
                       <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="featured post" />
                     </div>
                     <div id="title-container" role="link">
-                      {post.title.rendered}
+                      <p>{post.title.rendered}</p>
+                      <p className="category"><i>{post._embedded['wp:term']['0']['0'].name}</i></p>
                     </div>
                   </div>
                 </a>
@@ -64,7 +65,7 @@ class Ooze extends Component {
           #post-container {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row-reverse;
+            justify-content: flex-end;
           }
           a {
             color: #fff;
@@ -83,7 +84,11 @@ class Ooze extends Component {
           #title-container {
             width: 300px;
             margin-left: 10px;
-          } 
+            text-align: center;
+          }
+          i {
+            text-transform: uppercase;
+          }
         `}</style>
       </div>
     );
