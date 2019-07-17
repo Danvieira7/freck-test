@@ -3,6 +3,7 @@ import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer/Footer';
 import fetch from 'isomorphic-unfetch';
 import ProductList from '../components/ProductList';
+import { server } from '../config/server';
 
 class ShopFreck extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class ShopFreck extends Component {
   }
 
   static async getInitialProps () {
-    const res = await fetch(`https://freckbeauty.com/wp-json/wc/v3/products?consumer_key=${process.env.KEY}&consumer_secret=${process.env.SECRET}`);
+    const res = await fetch(`${server}/api/products`);
     const data = await res.json();
     return {
       products: data
