@@ -1,9 +1,10 @@
 import express from 'express';
 import next from 'next';
 
+import { subscribe } from './config/mailchimp';
+
 const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
-const ROOT_URL = dev ? `http://localhost:${port}` : 'https://freckbeauty.com';
 
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -36,6 +37,22 @@ app
 
 		server.get('/product/:slug', (req, res) => {
 			app.render(req, res, '/product', { slug: req.params.slug });
+		});
+
+		server.post('/api/v1/public/subscribe', async (req, res) => {
+			const { email } = req.body;
+			if (!email) {
+				res.json({ error: 'Email is required' });
+				return;
+			}
+
+			try {
+				await subscribe({ email });
+				res.json({ subscribed: 1 });
+				console.log(email);
+			} catch(err) {
+				res.json({ error: err.message || err.toString() });
+			}
 		});
 
 		server.get('*', (req, res) => {

@@ -1,10 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { subscribeToNewsletter } from '../../config/public';
 
 class FooterOptIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: ''
+      email: '',
+      value: '',
+      subscribed: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,7 +27,7 @@ class FooterOptIn extends Component {
 
     try {
       await subscribeToNewsletter({ email });
-
+      this.setState({subscribed: !this.state.subscribed});
       if (this.state) {
         this.state.value = '';
       }
@@ -34,6 +37,12 @@ class FooterOptIn extends Component {
   };
 
   render() {
+    const hide = {
+      display: this.state.subscribed ? 'none' : 'block'
+    };
+    const show = {
+      display: this.state.subscribed ? 'block' : 'none'
+    }
     return (
       <div>
         <div id="opt-in">
@@ -41,26 +50,27 @@ class FooterOptIn extends Component {
           <br/>
           <p>We send email updates on stuff you'll probably want to know about: new products, promos, international shipping, parties, travel guides, & playlists. Welcome to the Freck Fam.</p>
           <form onSubmit={this.handleSubmit}>
-              <div>
-                  <label
-                    className="form-label"
-                    htmlFor="email"
-                  >
-                    Email *
-                  </label>
-                  <br/>
-                  <input
-                    value={this.state.value}
-                    className="form-input"
-                    type="email"
-                    required
-                    id="email"
-                    onChange={this.handleChange}
-                  />
+              <div id="form-container" style={hide}>
+                <label
+                  className="form-label"
+                  htmlFor="email"
+                >
+                  Email *
+                </label>
+                <br/>
+                <input
+                  value={this.state.value}
+                  className="form-input"
+                  type="email"
+                  required
+                  id="email"
+                  onChange={this.handleChange}
+                />
+                <button type="submit">
+                  JOIN
+                </button>
               </div>
-              <button type="submit">
-                JOIN
-              </button>
+              <p style={show}>Thank you for joining the Freck Fam!</p>
           </form>
         </div>
         <style jsx>{`
