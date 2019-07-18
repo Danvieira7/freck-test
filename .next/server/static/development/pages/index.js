@@ -628,25 +628,25 @@ __webpack_require__.r(__webpack_exports__);
 function CactusSection() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     id: "cactus-collection",
-    className: "jsx-651011270"
+    className: "jsx-1948767634"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-651011270"
+    className: "jsx-1948767634"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
-    className: "jsx-651011270"
+    className: "jsx-1948767634"
   }, "Introducing the", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
-    className: "jsx-651011270"
+    className: "jsx-1948767634"
   }), "Cactus Collection"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "shop-freck"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-    className: "jsx-651011270"
+    className: "jsx-1948767634"
   }, "Shop"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-651011270"
+    className: "jsx-1948767634"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: "https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2019/03/Group_Collection_R_v2.jpg",
-    className: "jsx-651011270"
+    className: "jsx-1948767634"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "651011270"
-  }, "#cactus-collection.jsx-651011270{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:#af492f;height:550px;color:white;}img.jsx-651011270{width:582px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taWxjYWhjZW50ZW5vL2ZyZWNrL2ZyZWNrLW5leHQvY29tcG9uZW50cy9Ib21lL0NhY3R1c1NlY3Rpb24uanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWtCa0IsQUFHc0IsQUFPRCxZQUNkLDhEQVBpQix5REFDVSx5QkFDWixhQUNELFlBQ2QiLCJmaWxlIjoiL1VzZXJzL21pbGNhaGNlbnRlbm8vZnJlY2svZnJlY2stbmV4dC9jb21wb25lbnRzL0hvbWUvQ2FjdHVzU2VjdGlvbi5qc3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDYWN0dXNTZWN0aW9uKCkge1xuICByZXR1cm4gKFxuICAgIDxkaXYgaWQ9XCJjYWN0dXMtY29sbGVjdGlvblwiPlxuICAgICAgPGRpdj5cbiAgICAgICAgPGgyPlxuICAgICAgICAgIEludHJvZHVjaW5nIHRoZVxuICAgICAgICAgIDxiciAvPlxuICAgICAgICAgIENhY3R1cyBDb2xsZWN0aW9uXG4gICAgICAgIDwvaDI+XG4gICAgICAgIDxMaW5rIGhyZWY9XCJzaG9wLWZyZWNrXCI+XG4gICAgICAgICAgPGJ1dHRvbj5TaG9wPC9idXR0b24+XG4gICAgICAgIDwvTGluaz5cbiAgICAgIDwvZGl2PlxuICAgICAgPGRpdj5cbiAgICAgICAgPGltZyBzcmM9XCJodHRwczovL21rMGZyZWNrYmVhdXR5Zndqa3U1LmtpbnN0YWNkbi5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMTkvMDMvR3JvdXBfQ29sbGVjdGlvbl9SX3YyLmpwZ1wiIC8+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICNjYWN0dXMtY29sbGVjdGlvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2FmNDkyZjtcbiAgICAgICAgaGVpZ2h0OiA1NTBweDtcbiAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgfVxuICAgICAgaW1nIHtcbiAgICAgICAgd2lkdGg6IDU4MnB4O1xuICAgICAgfVxuICAgICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuICApO1xufTsiXX0= */\n/*@ sourceURL=/Users/milcahcenteno/freck/freck-next/components/Home/CactusSection.jsx */"));
+    id: "1948767634"
+  }, "#cactus-collection.jsx-1948767634{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#af492f;height:550px;color:white;}img.jsx-1948767634{width:582px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taWxjYWhjZW50ZW5vL2ZyZWNrL2ZyZWNrLW5leHQvY29tcG9uZW50cy9Ib21lL0NhY3R1c1NlY3Rpb24uanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWtCa0IsQUFHc0IsQUFTRCxZQUNkLDhEQVRpQix5REFDYywySEFDViw2RkFDTSx5QkFDWixhQUNELFlBQ2QiLCJmaWxlIjoiL1VzZXJzL21pbGNhaGNlbnRlbm8vZnJlY2svZnJlY2stbmV4dC9jb21wb25lbnRzL0hvbWUvQ2FjdHVzU2VjdGlvbi5qc3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDYWN0dXNTZWN0aW9uKCkge1xuICByZXR1cm4gKFxuICAgIDxkaXYgaWQ9XCJjYWN0dXMtY29sbGVjdGlvblwiPlxuICAgICAgPGRpdj5cbiAgICAgICAgPGgyPlxuICAgICAgICAgIEludHJvZHVjaW5nIHRoZVxuICAgICAgICAgIDxiciAvPlxuICAgICAgICAgIENhY3R1cyBDb2xsZWN0aW9uXG4gICAgICAgIDwvaDI+XG4gICAgICAgIDxMaW5rIGhyZWY9XCJzaG9wLWZyZWNrXCI+XG4gICAgICAgICAgPGJ1dHRvbj5TaG9wPC9idXR0b24+XG4gICAgICAgIDwvTGluaz5cbiAgICAgIDwvZGl2PlxuICAgICAgPGRpdj5cbiAgICAgICAgPGltZyBzcmM9XCJodHRwczovL21rMGZyZWNrYmVhdXR5Zndqa3U1LmtpbnN0YWNkbi5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMTkvMDMvR3JvdXBfQ29sbGVjdGlvbl9SX3YyLmpwZ1wiIC8+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICNjYWN0dXMtY29sbGVjdGlvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNhZjQ5MmY7XG4gICAgICAgIGhlaWdodDogNTUwcHg7XG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgIH1cbiAgICAgIGltZyB7XG4gICAgICAgIHdpZHRoOiA1ODJweDtcbiAgICAgIH1cbiAgICAgIGB9PC9zdHlsZT5cbiAgICA8L2Rpdj5cbiAgKTtcbn07Il19 */\n/*@ sourceURL=/Users/milcahcenteno/freck/freck-next/components/Home/CactusSection.jsx */"));
 }
 ;
 
@@ -800,28 +800,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _HomeHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HomeHeader */ "./components/Home/HomeHeader.jsx");
-var _jsxFileName = "/Users/milcahcenteno/freck/freck-next/components/Home/HomeHero.jsx";
 
 
 
 function HomeHero() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-3641069831",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_HomeHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "3641069831",
-    __self: this
-  }, "div.jsx-3641069831{background:url('https://freckbeauty.com/wp-content/uploads/2018/11/hero-home-2.jpg');background-position:top 45%;background-size:cover;height:620px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taWxjYWhjZW50ZW5vL2ZyZWNrL2ZyZWNrLW5leHQvY29tcG9uZW50cy9Ib21lL0hvbWVIZXJvLmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNZ0IsQUFHZ0cscUZBQ3pELDRCQUNOLHNCQUNULGFBQ2YiLCJmaWxlIjoiL1VzZXJzL21pbGNhaGNlbnRlbm8vZnJlY2svZnJlY2stbmV4dC9jb21wb25lbnRzL0hvbWUvSG9tZUhlcm8uanN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhvbWVIZWFkZXIgZnJvbSAnLi9Ib21lSGVhZGVyJztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSG9tZUhlcm8oKSB7XG4gIHJldHVybiAoXG4gIDxkaXY+XG4gICAgPEhvbWVIZWFkZXIgLz5cbiAgICA8c3R5bGUganN4PntgXG4gICAgICAgIGRpdiB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdXJsKCdodHRwczovL2ZyZWNrYmVhdXR5LmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOC8xMS9oZXJvLWhvbWUtMi5qcGcnKTtcbiAgICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiB0b3AgNDUlO1xuICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgICAgICAgaGVpZ2h0OiA2MjBweDtcbiAgICAgICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgPC9kaXY+XG4gIClcbn0iXX0= */\n/*@ sourceURL=/Users/milcahcenteno/freck/freck-next/components/Home/HomeHero.jsx */"));
+    className: "jsx-3222945103"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_HomeHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "3222945103"
+  }, "div.jsx-3222945103{background:url('https://freckbeauty.com/wp-content/uploads/2018/11/hero-home-2.jpg');background-position:top 45%;background-size:cover;height:620px;width:100%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taWxjYWhjZW50ZW5vL2ZyZWNrL2ZyZWNrLW5leHQvY29tcG9uZW50cy9Ib21lL0hvbWVIZXJvLmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNZ0IsQUFHZ0cscUZBQ3pELDRCQUNOLHNCQUNULGFBQ0YsV0FDYiIsImZpbGUiOiIvVXNlcnMvbWlsY2FoY2VudGVuby9mcmVjay9mcmVjay1uZXh0L2NvbXBvbmVudHMvSG9tZS9Ib21lSGVyby5qc3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgSG9tZUhlYWRlciBmcm9tICcuL0hvbWVIZWFkZXInO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBIb21lSGVybygpIHtcbiAgcmV0dXJuIChcbiAgPGRpdj5cbiAgICA8SG9tZUhlYWRlciAvPlxuICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgZGl2IHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB1cmwoJ2h0dHBzOi8vZnJlY2tiZWF1dHkuY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDE4LzExL2hlcm8taG9tZS0yLmpwZycpO1xuICAgICAgICAgIGJhY2tncm91bmQtcG9zaXRpb246IHRvcCA0NSU7XG4gICAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgICAgICBoZWlnaHQ6IDYyMHB4O1xuICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICB9XG4gICAgYH08L3N0eWxlPlxuICA8L2Rpdj5cbiAgKVxufSJdfQ== */\n/*@ sourceURL=/Users/milcahcenteno/freck/freck-next/components/Home/HomeHero.jsx */"));
 }
 
 /***/ }),

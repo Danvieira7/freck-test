@@ -20,6 +20,8 @@ export default function CactusSection() {
       #cactus-collection {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
         background-color: #af492f;
         height: 550px;
         color: white;

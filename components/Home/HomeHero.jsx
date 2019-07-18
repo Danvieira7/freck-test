@@ -10,6 +10,7 @@ export default function HomeHero() {
           background-position: top 45%;
           background-size: cover;
           height: 620px;
+          width: 100%;
         }
     `}</style>
   </div>

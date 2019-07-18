@@ -13812,7 +13812,7 @@ function MyAccount() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fmy-account&absolutePagePath=%2FUsers%2Fmilcahcenteno%2Ffreck%2Ffreck-next%2Fpages%2Fmy-account.js ***!
   \************************************************************************************************************************************************/
@@ -13835,5 +13835,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[6,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=my-account.js.map

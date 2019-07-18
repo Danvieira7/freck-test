@@ -15,19 +15,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/about": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/blog": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/cart": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/contact": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -36,10 +24,6 @@
       "static/runtime/main.js"
     ],
     "/my-account": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
