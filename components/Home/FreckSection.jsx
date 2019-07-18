@@ -2,18 +2,28 @@ import Link from 'next/link';
 
 export default function FreckSection() {
   return (
-    <div>
-      <h2>
-        The Original Freckle Cosmetic
-      </h2>
-      <button>Purchase</button>
+    <container>
+      <div>
+        Image goes here.
+        <img src="" alt=""/>
+      </div>
+      <div>
+        <h2>
+          The Original Freckle Cosmetic
+        </h2>
+        <button>Purchase</button>
+      </div>
       <style jsx>{`
-        div {
+        container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: center;
           height: 400px;
           color: #af492f;
-          height: 400px;
+          height: 650px;
         }
       `}</style>
-    </div>
+    </container>
   );
 };

@@ -27,7 +27,7 @@ class Ooze extends Component {
   render() {
     return (
       <div id="ooze-container">
-        <div>
+        <div id="button-container">
           <h2>
             Ooze
           </h2>
@@ -62,10 +62,22 @@ class Ooze extends Component {
             display: flex;
             justify-content: space-between;
           }
+          #button-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+          }
+          h2 {
+            font-size: 100px;
+            text-transform: uppercase;
+          }
           #post-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-end;
+            width: 70%;
           }
           a {
             color: #fff;
