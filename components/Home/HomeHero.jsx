@@ -7,9 +7,11 @@ export default function HomeHero() {
     <style jsx>{`
         div {
           background: url('https://freckbeauty.com/wp-content/uploads/2018/11/hero-home-2.jpg');
-          background-position: top 45%;
+          background-repeat: no-repeat;
+          background-position: center top;
+          background-attachment: scroll;
           background-size: cover;
-          height: 620px;
+          min-height: 620px;
           width: 100%;
         }
     `}</style>

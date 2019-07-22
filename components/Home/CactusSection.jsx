@@ -14,7 +14,7 @@ export default function CactusSection() {
         </Link>
       </div>
       <div>
-        <img src="https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2019/03/Group_Collection_R_v2.jpg" />
+        <img src="https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2019/03/Group_Collection_R_v2.jpg" alt="Cactus Collection" />
       </div>
       <style jsx>{`
       #cactus-collection {
@@ -25,6 +25,9 @@ export default function CactusSection() {
         background-color: #af492f;
         height: 550px;
         color: white;
+      }
+      h2 {
+        font-size: 58px;
       }
       img {
         width: 582px;
