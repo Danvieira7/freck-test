@@ -12,7 +12,11 @@ export default function FreckSection() {
           <br/>
           Freckle Cosmetic
         </h2>
-        <button>Purchase</button>
+        <Link href="product/freck-og">
+          <a>
+            <button>Purchase</button>
+          </a>
+        </Link>
       </div>
       <style jsx>{`
         container {
@@ -26,6 +30,29 @@ export default function FreckSection() {
         }
         h2 {
           font-size: 58px;
+        }
+        button {
+          text-transform: uppercase;
+          border-style: solid;
+          background-clip: padding-box;
+          background-color: transparent;
+          border-color: #a73e24;
+          border-top-width: 1px;
+          border-right-width: 1px;
+          border-bottom-width: 1px;
+          border-left-width: 1px;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+          font-size: 16px;
+          line-height: 1.6;
+          letter-spacing: .5px;
+          padding-top: 5px;
+          padding-right: 10px;
+          padding-bottom: 5px;
+          padding-left: 10px;
+          color: #a73e24;;
         }
       `}</style>
     </container>

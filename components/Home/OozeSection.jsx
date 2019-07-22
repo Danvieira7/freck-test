@@ -63,11 +63,21 @@ class Ooze extends Component {
             justify-content: space-between;
           }
           #button-container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            width: 30%;
+            padding-top: 9%;
+            padding-left: 5%;
+          }
+          button {
+            width: 200px;
+            min-height: 45px;
+            background-color: transparent;
+            border: solid;
+            border: 1px solid #e4d8c7;
+            color: #e4d8c7;
+            font-family: Helvetica, Verdana, Arial, sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 18px;
           }
           h2 {
             font-size: 100px;
@@ -75,7 +85,6 @@ class Ooze extends Component {
           }
           #post-container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: flex-end;
             width: 70%;
           }

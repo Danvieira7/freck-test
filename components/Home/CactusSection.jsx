@@ -29,6 +29,19 @@ export default function CactusSection() {
       h2 {
         font-size: 58px;
       }
+      button {
+        width: 200px;
+        min-height: 45px;
+        background-color: transparent;
+        border: solid;
+        border: 1px solid #e4d8c7;
+        color: #e4d8c7;
+        font-family: Helvetica, Verdana, Arial, sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 18px;
+      }
       img {
         width: 582px;
       }
