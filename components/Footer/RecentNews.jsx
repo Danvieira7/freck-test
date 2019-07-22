@@ -43,6 +43,11 @@ class RecentNews extends Component {
           </Link>
         </div>
       ))}
+      <div>
+        <Link>
+            <a>SEE ALL</a>
+        </Link>
+      </div>
       <style jsx>{`
         a {
           color: #fff;

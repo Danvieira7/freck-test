@@ -87,6 +87,7 @@ class Ooze extends Component {
             display: flex;
             justify-content: flex-end;
             width: 70%;
+            align-items: center;
           }
           a {
             color: #fff;
