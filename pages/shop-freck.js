@@ -27,8 +27,7 @@ class ShopFreck extends Component {
       <div>
         <MainHeader />
         <div className="hero-container">
-          <div>
-            <img src="https://freckbeauty.com/wp-content/uploads/2018/11/shop-header-left.jpg" />
+          <div id="left-hero">
           </div>
           <div>
           </div>
@@ -44,20 +43,35 @@ class ShopFreck extends Component {
             )
           ) : ''}
         </div>
+        <div id="products-hero"></div>
         <Footer />
         <style jsx>{`
           .hero-container {
             margin: 0;
             margin-bottom: -5.5px;
           }
-          img {
-            max-width: 55%;
+          #left-hero {
+            background: url('https://freckbeauty.com/wp-content/uploads/2018/11/shop-header-left.jpg');
+            background-repeat: no-repeat;
+            width: 50%;
+            height: 725px;
           }
           .product-container {
             display: flex;
             flex-wrap: wrap;
             max-width: 1000px;
             margin: 0 auto;
+            margin-top: 10%;
+          }
+          #products-hero {
+            background: url('https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2019/04/Freck_Group-Collection_Flatlay-Shadow_R_1351x901_ImgOptm.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: scroll;
+            background-size: contain;
+            min-height: 900px;
+            width: 100%;
+            margin-top: 10%;
           }
         `}</style>
       </div>
