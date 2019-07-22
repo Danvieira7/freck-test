@@ -27,7 +27,7 @@ class HomeHeader extends Component {
         </Head>
         <Link href="/">
           <a>
-            <img src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" />
+            <img className="logo" src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" alt="Freck logo"/>
           </a>
         </Link>
         <div className="nav">
@@ -50,7 +50,9 @@ class HomeHeader extends Component {
             <a>Log In</a>
           </Link>
           <Link href="cart">
-            <a>Cart</a>
+            <a>
+              <img className="cart" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" alt="cart"/>
+            </a>
           </Link>
         </div>
         <div className="hamburger" onClick={this.toggleClass}>
@@ -73,7 +75,22 @@ class HomeHeader extends Component {
             align-items: center;
             height: 70px;
           }
-          img {
+          a {
+            text-decoration: none;
+            color: #A73E24;
+            font-style: italic;
+            text-transform: uppercase;
+            padding: 0 10px;
+          }
+          a:hover {
+            opacity: 0.6;
+            color: #b86756;
+          }
+          a {
+            font-family: 'Helvetica';
+            padding: 10px;
+          }
+          .logo {
             margin-left: -32.5px;
             margin-top: 4.5px;
             height: 100px;
@@ -116,20 +133,11 @@ class HomeHeader extends Component {
             -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-8px, -8px);
           }
-          a {
-            text-decoration: none;
-            color: #A73E24;
-            font-style: italic;
-            text-transform: uppercase;
-            padding: 0 10px;
+          div > .nav > a {
+            padding-left: 25px;
           }
-          a:hover {
-            opacity: 0.6;
-            color: #b86756;
-          }
-          a {
-            font-family: 'Helvetica';
-            padding: 10px;
+          .cart {
+            width: 20px;
           }
         `}</style>
       </div>
