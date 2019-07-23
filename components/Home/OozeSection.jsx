@@ -40,11 +40,11 @@ class Ooze extends Component {
             <div className="card" key={post.id}>
               <Link href={post.slug} key={post.id}>
                 <a>
-                  <div id="news-container">
-                    <div id="img-container" role="img">
+                  <div id="ooze-news-container">
+                    <div id="ooze-img-container" role="img">
                       <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="featured post" />
                     </div>
-                    <div id="title-container" role="link">
+                    <div id="ooze-title-container" role="link">
                       <p>{post.title.rendered.replace(`&#8217;`, `'`).replace(`&#038;`, '&')}</p>
                       <p className="category"><i>{post._embedded['wp:term']['0']['0'].name}</i></p>
                     </div>
@@ -56,11 +56,11 @@ class Ooze extends Component {
         </div>
         <style jsx>{`
           #ooze-container {
+            display: flex;
+            justify-content: space-between;
             color: #e4d8c7;
             background-color: #af492f;
             height: 425px;
-            display: flex;
-            justify-content: space-between;
           }
           #button-container {
             padding-top: 9%;
@@ -85,15 +85,12 @@ class Ooze extends Component {
           }
           #post-container {
             display: flex;
-            justify-content: flex-end;
-            width: 70%;
             align-items: center;
           }
-          a {
-            color: #fff;
-            text-decoration: none;
+          #ooze-news-container {
+            min-height: 370px;
           }
-          #img-container {
+          #ooze-img-container {
             max-width: 300px;
             max-height: 300px;
             margin: 10px;
@@ -103,15 +100,18 @@ class Ooze extends Component {
           img {
             width: 150%;
           }
-          #title-container {
-            width: 300px;
-            margin-left: 10px;
+          #ooze-title-container {
+            max-width: 300px;
             text-align: center;
+          }
+          a {
+            color: #fff;
+            text-decoration: none;
           }
           i {
             text-transform: uppercase;
           }
-        `}</style>
+          `}</style>
       </div>
     );
   }
