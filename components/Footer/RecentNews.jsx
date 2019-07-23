@@ -26,7 +26,7 @@ class RecentNews extends Component {
   render() {
     return (
     <div>
-      RECENT NEWS
+      <p className="footer-nav-title">RECENT NEWS</p>
       {this.state.posts.map(post => (
         <div className="card" key={post.id}>
           <Link href={post.slug} key={post.id}>
@@ -55,6 +55,7 @@ class RecentNews extends Component {
         }
         #news-container {
           display: flex;
+          padding-bottom: 20px;
         }
         #img-container {
           min-width: 75px;

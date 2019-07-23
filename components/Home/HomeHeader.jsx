@@ -99,7 +99,7 @@ class HomeHeader extends Component {
             padding-right: 40px;
             font-size: 18px;
           }
-          @media screen and (max-width: 925px) {
+          @media screen and (max-width: 1002px) {
             .nav {
               display: none;
             }
@@ -110,7 +110,7 @@ class HomeHeader extends Component {
             padding-top: 14px;
             padding-right: 20px;
           }
-          @media screen and (min-width: 926px) {
+          @media screen and (min-width: 1003px) {
             .hamburger {
               display: none;
             }

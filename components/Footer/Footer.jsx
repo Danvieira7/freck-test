@@ -17,6 +17,12 @@ export default function Footer() {
       <div>
         <RecentNews />
       </div>
+    <style global jsx>{`
+      .footer-nav-title {
+        color: #9a8470;
+        padding-bottom: 10px;
+      }
+    `}</style>
     <style jsx>{`
       #container {
         display: grid;
@@ -24,6 +30,7 @@ export default function Footer() {
         grid-template-columns: 25% 50% 25%;
         background-color: #1c150f;
         color: #fff;
+        padding: 20px 20px;
       }
     `}</style>
   </div>

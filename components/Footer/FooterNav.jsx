@@ -4,9 +4,8 @@ export default function FooterNav() {
   return (
     <div>
       <div id="footer-nav">
-        <div className="footer-column">
-          SHOP FRECK
-          <br/><br/>
+        <div className="footer-column one">
+          <p className="footer-nav-title">SHOP FRECK</p>
           <p>
             <Link>
               <a>Freck OG</a>
@@ -38,9 +37,8 @@ export default function FooterNav() {
             </Link>
           </p>
         </div>
-        <div className="footer-column">
-          CUSTOMER SERVICE
-          <br/><br/>
+        <div className="footer-column two">
+          <p className="footer-nav-title">CUSTOMER SERVICE</p>
           <p>
             <Link>
               <a>hi@freckbeauty.com</a>
@@ -54,9 +52,8 @@ export default function FooterNav() {
           <p>MON – SAT | 9 AM – 6 PM PDT</p>
           <img src="" alt="SSL certificate"/>
         </div>
-        <div className="footer-column">
-          BLOG
-          <br/><br/>
+        <div className="footer-column three">
+          <p className="footer-nav-title">BLOG</p>
           <p>
             <Link>
               <a>Beauty</a>
@@ -83,9 +80,8 @@ export default function FooterNav() {
             </Link>
           </p>
         </div>
-        <div className="footer-column">
-          GET FRECKED
-          <br/><br/>
+        <div className="footer-column four">
+          <p className="footer-nav-title">GET FRECKED</p>
           <p>
             <Link>
               <a>About</a>
@@ -117,8 +113,9 @@ export default function FooterNav() {
             </Link>
           </p>
         </div>
-        <div className="logo">
-          FRECK LOGO GOES HERE
+        <div className="logo-container">
+        <div className="separator"></div>
+          <img className="logo" src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" alt="Freck logo"/>
           <p>
             © 2019 Freck Beauty. All Rights Reserved.
           </p>
@@ -132,10 +129,25 @@ export default function FooterNav() {
           font-weight: 900;
         }
         .footer-column {
-          padding: 20px;
+          padding-bottom: 20px;
+        }
+        .two, .three {
+          padding-right: 35px;
+        }
+        .two {
+          padding-left: 35px;
+        }
+        .separator {
+          height: 1px;
+          border-top: 1px solid #332b23;
+          width: 100%;
+        }
+        .logo-container {
+          text-align: center;
+          color: #4d3c2d;
         }
         .logo {
-          text-align: center;
+          width: 60%;
         }
       `}</style>
     </div>

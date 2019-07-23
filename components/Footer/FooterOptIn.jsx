@@ -73,6 +73,8 @@ class FooterOptIn extends Component {
               <p style={show}>Thank you for joining the Freck Fam!</p>
           </form>
         </div>
+        <style jsx>{`
+        `}</style>
       </div>
     );
   }
