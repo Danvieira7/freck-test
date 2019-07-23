@@ -66,6 +66,7 @@ class FooterOptIn extends Component {
                   id="email"
                   onChange={this.handleChange}
                 />
+                <br/>
                 <button type="submit">
                   JOIN
                 </button>
@@ -74,6 +75,12 @@ class FooterOptIn extends Component {
           </form>
         </div>
         <style jsx>{`
+        p {
+          padding-bottom: 20px;
+        }
+          button {
+            margin-top: 15px;
+          }
         `}</style>
       </div>
     );

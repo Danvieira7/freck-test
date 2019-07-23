@@ -64,6 +64,9 @@ class RecentNews extends Component {
           overflow: hidden;
         }
         #title-container {
+          padding-left: 20px;
+          display: flex;
+          align-items: center;
         } 
         img {
           height: 75px;
