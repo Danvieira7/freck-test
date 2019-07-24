@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -30,7 +30,7 @@ class PostList extends Component {
         <div id="posts-container">
           {this.state.posts.map(post => (
             <div className="card" key={post.id}>
-              <Link href={post.slug} key={post.id}>
+              <Link href={`/post?slug=${post.slug}&apiRoute=post`} as={post.slug} key={post.id}>
                 <a>
                   <div id="single-post-container">
                     <div id="img-container" role="img">

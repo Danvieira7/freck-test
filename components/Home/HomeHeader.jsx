@@ -18,6 +18,15 @@ class HomeHeader extends Component {
   }
 
   render() {
+    const bar1 = {
+      transform: this.state.transform ? 'rotate(-45deg) translate(-9px, 6px)' : ''
+    }
+    const bar2 = {
+      opacity: this.state.transform ? '0' : ''
+    }
+    const bar3 = {
+      transform: this.state.transform ? 'rotate(45deg) translate(-8px, -8px)' : ''
+    }
     return (
       <div>
         <Head>
@@ -56,9 +65,9 @@ class HomeHeader extends Component {
           </Link>
         </div>
         <div className="hamburger" onClick={this.toggleClass}>
-          <div className={this.state.transform ? 'bar1 change1' : 'bar1'}></div>
-          <div className={this.state.transform ? 'bar2 change2' : 'bar2'}></div>
-          <div className={this.state.transform ? 'bar3 change3' : 'bar3'}></div>
+          <div className="bar1" style={bar1}></div>
+          <div className="bar2" style={bar2}></div>
+          <div className="bar3" style={bar3}></div>
         </div>
         <style jsx global>{`
           * { 
@@ -121,17 +130,6 @@ class HomeHeader extends Component {
             background-color: #a73e24;
             margin: 6px 0;
             transition: 0.4s;
-          }
-          .change1 .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate(-45deg) translate(-9px, 6px);
-          }
-          .change2 .bar2 {
-            opacity: 0;
-          }
-          .change3 .bar3 {
-            -webkit-transform: rotate(45deg) translate(-8px, -8px);
-            transform: rotate(45deg) translate(-8px, -8px);
           }
           div > .nav > a {
             padding-left: 25px;

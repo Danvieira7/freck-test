@@ -29,6 +29,11 @@ app
 
 		server.use(express.json());
 
+		server.get('/post/:slug', (req, res) => {
+			const queryParams = { slug: req.params.slug, apiRoute: 'post' };
+			app.render(req, res, '/post', queryParams);
+		});
+
 		server.get('/api/products', (req, response) => {
 			WooCommerce.getAsync('products', function(err, data, res) {
 				response.json(JSON.parse(res));

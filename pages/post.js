@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { useRouter } from 'next/router';
 
-class PostView extends Component {
+class Post extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +14,7 @@ class PostView extends Component {
   componentDidMount() {
     const slug = this.props.match.params.slug;
     axios
-      .get(`https://freckbeauty.com/wp-json/wp/v2/posts?slug=${slug}`)
+      .get(`https://freckbeauty.com/wp-json/wp/v2/${apiRoute}?slug=${slug}`)
       .then(post => {
         this.setState({
           post: post.data[0]
@@ -45,4 +46,4 @@ class PostView extends Component {
   }
 }
 
-export default PostView;
+export default Post;
