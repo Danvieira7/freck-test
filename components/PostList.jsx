@@ -12,7 +12,7 @@ class PostList extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts")
+    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts?_embed")
       .then(posts => {
         this.setState({
           posts: posts.data
@@ -26,21 +26,64 @@ class PostList extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.posts.map(post => (
-          <div className="card" key={post.id}>
-              <div className="card-content">
-            <Link href={post.slug} key={post.id}>
+      <div id="container">
+        <div id="posts-container">
+          {this.state.posts.map(post => (
+            <div className="card" key={post.id}>
+              <Link href={post.slug} key={post.id}>
                 <a>
-                  <h3>{post.title.rendered.replace(`&#8217;`, `'`).replace(`&#038;`, '&')}</h3>
+                  <div id="single-post-container">
+                    <div id="img-container" role="img">
+                      <img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="featured post" />
+                    </div>
+                    <div id="title-container" role="link">
+                      <p>{post.title.rendered.replace(`&#8217;`, `'`).replace(`&#038;`, '&')}</p>
+                      <p className="category"><i>{post._embedded['wp:term']['0']['0'].name}</i></p>
+                    </div>
+                  </div>
                 </a>
-            </Link>
-              </div>
+              </Link>
             </div>
-        ))}
+          ))}
+        </div>
+        <style jsx>{`
+          #container {
+            display: flex;
+            justify-content: center;
+          }
+          #posts-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            justify-content: center;
+          }
+          #single-post-container {
+            min-height: 370px;
+          }
+          #img-container {
+            max-width: 300px;
+            max-height: 300px;
+            margin: 20px;
+            overflow: hidden;
+            object-fit: scale-down;
+          }
+          img {
+            width: 150%;
+          }
+          #title-container {
+            max-width: 300px;
+          }
+          a {
+            color: #000;
+            text-decoration: none;
+          }
+          i {
+            text-transform: uppercase;
+          }
+          `}</style>
       </div>
     );
   }
-}
+};
 
 export default PostList;
