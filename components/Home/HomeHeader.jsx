@@ -27,6 +27,9 @@ class HomeHeader extends Component {
     const bar3 = {
       transform: this.state.transform ? 'rotate(45deg) translate(-8px, -8px)' : ''
     }
+    const toggle = {
+      display: this.state.transform ? 'block' : 'none'
+    }
     return (
       <div>
         <Head>
@@ -68,6 +71,27 @@ class HomeHeader extends Component {
           <div className="bar1" style={bar1}></div>
           <div className="bar2" style={bar2}></div>
           <div className="bar3" style={bar3}></div>
+        </div>
+        <div className="submenu" style={toggle}>
+          <div>
+            <div>My Account Icon</div>
+            <div>Cart Icon</div>
+          </div>
+          <div>
+            SHOP BEAUTY
+            <div></div>
+            <div></div>
+          </div>
+          <div>
+            BEST SELLERS
+            <div></div>
+            <div></div>
+          </div>
+          <div>ABOUT</div>
+          <div>OOZE</div>
+          <div>CONTACT</div>
+          <div>ACCOUNT</div>
+          <div>Freck Logo</div>
         </div>
         <style jsx global>{`
           * { 
@@ -136,6 +160,9 @@ class HomeHeader extends Component {
           }
           .cart {
             width: 20px;
+          }
+          .submenu {
+            padding-right: 20px;
           }
         `}</style>
       </div>
