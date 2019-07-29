@@ -67,6 +67,28 @@ class HomeHeader extends Component {
             </a>
           </Link>
         </div>
+        <div className="mobile-nav-section">
+          <div className="nav-div">
+            <a data-w-id="700b4392-5203-73bc-e19b-4b4356c967ec" href="#" className="link-block-2 w-inline-block">
+              <img src="https://freckbeauty.com/wp-content/uploads/2019/07/Freck-dots_dots.png" width="25" height="25" alt="" className="image-7" />
+            </a>
+            <a href="#" className="w-inline-block">
+              <img src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Search.png" height="25" width="25" alt="" className="image" />
+            </a>
+            <a href="/" className="w-inline-block">
+              <img src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" width="150" srcset="images/Freck-Logos-All_Freck-Rust_3_566x150-p-500.png 500w, images/Freck-Logos-All_Freck-Rust_3_566x150.png 566w" sizes="(max-width: 479px) 41vw, 150px" alt="" className="image-13" />
+            </a>
+            <a href="https://freckbeauty.com/my-account/" className="w-inline-block">
+              <img src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Account.png" width="25" height="25" alt="" className="image-4" />
+            </a>
+            <a href="https://freckbeauty.com/cart/" className="w-inline-block">
+              <img src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" width="25" height="25" alt="" className="image-2" />
+            </a>
+          </div>
+          <div className="mobile-nav-second-div">
+            <a href="http://freck-mobile-redesign.webflow.io/shop-freck" className="no-underline">SHOP</a><a href="https://freckbeauty.com/about/" className="no-underline">ABOUT</a><a href="https://freckbeauty.com/blog/" className="no-underline">BLOG</a><a href="https://freckbeauty.com/contact/" className="no-underline">CONTACT</a><a href="https://freckbeauty.com/my-account/" className="no-underline">ACCOUNT</a>
+          </div>
+        </div>
         <div className="hamburger" onClick={this.toggleClass}>
           <div className="bar1" style={bar1}></div>
           <div className="bar2" style={bar2}></div>
@@ -132,7 +154,7 @@ class HomeHeader extends Component {
             padding-right: 40px;
             font-size: 18px;
           }
-          @media screen and (max-width: 1002px) {
+          @media only screen and (max-width: 1002px) {
             .nav {
               display: none;
             }
@@ -142,7 +164,7 @@ class HomeHeader extends Component {
             cursor: pointer;
             padding-right: 1.5%;
           }
-          @media screen and (min-width: 1003px) {
+          @media only screen (min-width: 1004px) {
             .hamburger {
               display: none;
             }
@@ -176,6 +198,16 @@ class HomeHeader extends Component {
           }
           .submenu-item {
             padding-left: 20px;
+          }
+          @media only screen and (max-width: 421px) {
+            .hamburger, .logo {
+              display: none;
+            }
+          }
+          @media only screen and (min-width: 421px) {
+            .mobile-nav-section {
+              display: none;
+            }
           }
         `}</style>
       </div>
