@@ -22,7 +22,7 @@ export default function CactusSection() {
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        background-color: #af492f;
+        background-color: #a5503c;
         height: 550px;
         color: white;
       }

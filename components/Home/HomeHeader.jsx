@@ -31,7 +31,7 @@ class HomeHeader extends Component {
       display: this.state.transform ? 'block' : 'none'
     }
     return (
-      <div>
+      <div id="header">
         <Head>
           <title>Freck | The Original Faux Freckles</title>
           <meta name="description" content="change me: description for indexing bots" />
@@ -73,25 +73,25 @@ class HomeHeader extends Component {
           <div className="bar3" style={bar3}></div>
         </div>
         <div className="submenu" style={toggle}>
-          <div>
+          <div className="submenu-icons">
             <div>My Account Icon</div>
             <div>Cart Icon</div>
           </div>
-          <div>
+          <div className="submenu-item">
             SHOP BEAUTY
             <div></div>
             <div></div>
           </div>
-          <div>
+          <div className="submenu-item">
             BEST SELLERS
             <div></div>
             <div></div>
           </div>
-          <div>ABOUT</div>
-          <div>OOZE</div>
-          <div>CONTACT</div>
-          <div>ACCOUNT</div>
-          <div>Freck Logo</div>
+          <div className="submenu-item">ABOUT</div>
+          <div className="submenu-item">OOZE</div>
+          <div className="submenu-item">CONTACT</div>
+          <div className="submenu-item">ACCOUNT</div>
+          <div className="submenu-item">Freck Logo</div>
         </div>
         <style jsx global>{`
           * { 
@@ -102,7 +102,7 @@ class HomeHeader extends Component {
         `}
         </style>
         <style jsx>{`
-          div {
+          #header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -140,8 +140,7 @@ class HomeHeader extends Component {
           .hamburger {
             display: inline-block;
             cursor: pointer;
-            padding-top: 14px;
-            padding-right: 20px;
+            padding-right: 1.5%;
           }
           @media screen and (min-width: 1003px) {
             .hamburger {
@@ -155,14 +154,28 @@ class HomeHeader extends Component {
             margin: 6px 0;
             transition: 0.4s;
           }
-          div > .nav > a {
+          #header > .nav > a {
             padding-left: 25px;
           }
           .cart {
             width: 20px;
+            margin-bottom: -2px;
           }
           .submenu {
-            padding-right: 20px;
+            background-color: #f6f8f6;
+            position: fixed;
+            width: 40%;
+            height: 100vh;
+            top: 0px;
+            left: 52.5%;
+            z-index: 1000;
+          }
+          .submenu-icons {
+            display: flex;
+            justify-content: space-around;
+          }
+          .submenu-item {
+            padding-left: 20px;
           }
         `}</style>
       </div>
