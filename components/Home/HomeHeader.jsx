@@ -164,7 +164,7 @@ class HomeHeader extends Component {
             cursor: pointer;
             padding-right: 1.5%;
           }
-          @media only screen (min-width: 1004px) {
+          @media only screen (min-width: 1003px) {
             .hamburger {
               display: none;
             }
@@ -201,6 +201,11 @@ class HomeHeader extends Component {
           }
           @media only screen and (max-width: 421px) {
             .hamburger, .logo {
+              display: none;
+            }
+          }
+          @media only screen and (min-width: 1003px) {
+            .hamburger {
               display: none;
             }
           }

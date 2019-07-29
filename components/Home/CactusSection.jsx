@@ -23,7 +23,7 @@ export default function CactusSection() {
         justify-content: space-around;
         align-items: center;
         background-color: #a5503c;
-        height: 550px;
+        min-height: 550px;
         color: white;
       }
       h2 {

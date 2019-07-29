@@ -26,7 +26,7 @@ export default function FreckSection() {
           align-items: center;
           min-height: 700px;
           color: #af492f;
-          height: 650px;
+          min-height: 650px;
         }
         h2 {
           font-size: 58px;
