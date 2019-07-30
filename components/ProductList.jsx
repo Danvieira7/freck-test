@@ -57,8 +57,16 @@ class ProductList extends Component {
 						text-align: center;
 						text-transform: uppercase;
 					}
+					.product-description {
+						line-height: 20px;
+					}
 					button {
 						background-color: #A73E24;
+						color: #fff;
+						width: 100%;
+						max-width: 350px;
+						padding: 9px 15px;
+						border: none;
 					}
 				`}</style>
 			</div>
