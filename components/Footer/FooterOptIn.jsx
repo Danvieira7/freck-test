@@ -75,9 +75,9 @@ class FooterOptIn extends Component {
           </form>
         </div>
         <style jsx>{`
-        p {
-          padding-bottom: 20px;
-        }
+          p {
+            padding-bottom: 20px;
+          }
           button {
             margin-top: 15px;
           }

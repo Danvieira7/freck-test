@@ -5,7 +5,7 @@ class ProductList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			hover: false
+			hover: false,
 		}
 		this.toggleHover = this.toggleHover.bind(this);
 	}
@@ -15,17 +15,22 @@ class ProductList extends Component {
 	}
 	render() {
 		const {product} = this.props;
-		let toggleImg;
-		if (this.state.hover) {
-			toggleImg = {opacity: '0', cursor: 'pointer', transition: 'filter .6s, opacity .6s, transform .6s, -webkit-filter .6s, -webkit-transform .6s'}
-		} else {
-			toggleImg = {opacity: '1'}
-		}
 		const rawJson = product.short_description;
 		const productDescription = rawJson.replace(/(<([^>]+)>)/ig,"");
+		const toggleImg = {
+			opacity: this.state.hover ? '0' : '1',
+			cursor: this.state.hover ? 'pointer' : '',
+			transition: this.state.hover ? 'filter .6s, opacity .6s, transform .6s, -webkit-filter .6s, -webkit-transform .6s' : ''
+		}
+		const outOfStock = {
+			opacity: product.in_stock ? '0' : '1'
+		}
 		return (
 			<div>
 				<div className="product-image">
+					<div className="out-of-stock" style={outOfStock}>
+						OUT OF STOCK
+					</div>
 					<Link
 						href={`/product`}
 						as={`/product/${product.slug}`}
@@ -42,7 +47,7 @@ class ProductList extends Component {
 				<div className="product-heading">
 					<h3>{product.name}</h3>
 					<h5 className="product-description">{productDescription}</h5>
-					<button>${product.price} — ADD</button>
+					<button onClick={() => console.log(`${product.id} added to cart!`)}>${product.price} — ADD</button>
 				</div>
 				<style jsx>{`
 					img, .product-image {
@@ -50,8 +55,21 @@ class ProductList extends Component {
 						max-height: 450px;
 					}
 					.product-image {
+						position: relative;
 						background: url('${product.images[1].src}');
 						background-size: cover;
+						font-weight: bold;
+					}
+					.out-of-stock {
+						position: absolute;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: rgba(255, 255, 255, 0.88);
+						height: 14%;
+						width: 100%;
+						opacity: 0;
+						top: 50%;
 					}
 					.product-heading {
 						text-align: center;
