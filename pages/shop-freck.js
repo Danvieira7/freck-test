@@ -8,9 +8,7 @@ import { server } from '../config/server';
 class ShopFreck extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    
-    };
+    this.state = {};
   }
 
   static async getInitialProps() {
@@ -28,6 +26,7 @@ class ShopFreck extends Component {
         <MainHeader />
         <div className="hero-container">
           <div id="left-hero">
+            <img src="https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2018/10/f-dot.svg" alt="F Dot Logo"/>
           </div>
           <div>
           </div>
@@ -53,8 +52,16 @@ class ShopFreck extends Component {
           #left-hero {
             background: url('https://freckbeauty.com/wp-content/uploads/2018/11/shop-header-left.jpg');
             background-repeat: no-repeat;
+            background-position: 0% 50%;
+            background-size: cover;
             width: 50%;
-            height: 725px;
+            height: 720px;
+            display: flex;
+            align-items: center;
+          }
+          img {
+            width: 21%;
+            margin-left: 30px;
           }
           .product-container {
             display: flex;

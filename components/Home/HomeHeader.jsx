@@ -14,7 +14,6 @@ class HomeHeader extends Component {
 
   toggleClass() {
     this.setState({transform: !this.state.transform});
-    console.log(`Transform is ${this.state.transform}`);
   }
 
   render() {
