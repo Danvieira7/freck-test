@@ -4,7 +4,7 @@ import Favicon from './Favicon';
 
 function MainHeader() {
   return (
-    <div>
+    <div id="main-header">
       <Head>
         <Favicon />
       </Head>
@@ -42,10 +42,13 @@ function MainHeader() {
           margin: 0;
           padding: 0;
         }
+        html, body {
+          overflow-x: hidden;
+        }
       `}
       </style>
       <style jsx>{`
-        div {
+        #main-header {
           display: flex;
           justify-content: space-between;
           align-items: center;

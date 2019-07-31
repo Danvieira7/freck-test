@@ -30,7 +30,7 @@ class HomeHeader extends Component {
       display: this.state.transform ? 'block' : 'none'
     }
     return (
-      <div id="header">
+      <div id="home-header">
         <Head>
           <title>Freck | The Original Faux Freckles</title>
           <meta name="description" content="change me: description for indexing bots" />
@@ -120,14 +120,18 @@ class HomeHeader extends Component {
             margin: 0;
             padding: 0;
           }
+          html, body {
+            overflow-x: hidden;
+          }
         `}
         </style>
         <style jsx>{`
-          #header {
+          #home-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 70px;
+            width: 100%;
           }
           a {
             text-decoration: none;
