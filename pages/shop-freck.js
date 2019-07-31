@@ -66,9 +66,10 @@ class ShopFreck extends Component {
           .product-container {
             display: flex;
             flex-wrap: wrap;
-            max-width: 1000px;
-            margin: 0 auto;
             margin-top: 10%;
+            justify-content: center;
+            margin-right: 5%;
+            margin-left: 5%;
           }
           #products-hero {
             background: url('https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2019/04/Freck_Group-Collection_Flatlay-Shadow_R_1351x901_ImgOptm.jpg');
