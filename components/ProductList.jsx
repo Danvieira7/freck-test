@@ -26,7 +26,7 @@ class ProductList extends Component {
 			opacity: product.in_stock ? '0' : '1'
 		}
 		return (
-			<div>
+			<div className="product-container">
 				<div className="product-image">
 					<div className="out-of-stock" style={outOfStock}>
 						OUT OF STOCK
@@ -90,6 +90,22 @@ class ProductList extends Component {
 					}
 					button:focus {
 						outline: 0;
+					}
+					@media only screen and (max-width: 420px) {
+						.product-container {
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: center;
+							width: 150px;
+							padding: 10px;
+						}
+						img, .product-image {
+							max-width: 150px;
+							max-height: 150px;
+						}
+						.out-of-stock {
+							margin-top: -10px;
+						}
 					}
 				`}</style>
 			</div>
