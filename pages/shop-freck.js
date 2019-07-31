@@ -46,7 +46,6 @@ class ShopFreck extends Component {
         <Footer />
         <style jsx>{`
           .hero-container {
-            margin: 0;
             margin-bottom: -5.5px;
           }
           #left-hero {

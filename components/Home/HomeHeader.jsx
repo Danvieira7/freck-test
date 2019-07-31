@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Favicon from '../Favicon';
-
+import MobileHeader from '../Header/MobileHeader';
 class HomeHeader extends Component {
   constructor(props) {
     super(props);
@@ -30,62 +30,43 @@ class HomeHeader extends Component {
       display: this.state.transform ? 'block' : 'none'
     }
     return (
-      <div id="home-header">
+      <div>
         <Head>
           <title>Freck | The Original Faux Freckles</title>
           <meta name="description" content="change me: description for indexing bots" />
           <Favicon />
         </Head>
-        <Link href="/">
-          <a>
-            <img className="logo" src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" alt="Freck logo"/>
-          </a>
-        </Link>
-        <div className="nav">
+        <MobileHeader />
+        <div id="home-header">
           <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="shop-freck">
-            <a>Shop Freck</a>
-          </Link>
-          <Link href="blog">
-            <a>Blog</a>
-          </Link>
-          <Link href="about">
-            <a>About</a>
-          </Link>
-          <Link href="contact">
-            <a>Contact</a>
-          </Link>
-          <Link href="my-account">
-            <a>Log In</a>
-          </Link>
-          <Link href="cart">
             <a>
-              <img className="cart" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" alt="cart"/>
+              <img className="logo" src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" alt="Freck logo"/>
             </a>
           </Link>
-        </div>
-        <div className="mobile-nav-section">
-          <div className="nav-div">
-            <a data-w-id="700b4392-5203-73bc-e19b-4b4356c967ec" href="#" className="link-block-2 w-inline-block">
-              <img src="https://freckbeauty.com/wp-content/uploads/2019/07/Freck-dots_dots.png" width="25" height="25" alt="" className="image-7" />
-            </a>
-            <a href="#" className="w-inline-block">
-              <img src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Search.png" height="25" width="25" alt="" className="image" />
-            </a>
-            <a href="/" className="w-inline-block">
-              <img src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" width="150" srcset="images/Freck-Logos-All_Freck-Rust_3_566x150-p-500.png 500w, images/Freck-Logos-All_Freck-Rust_3_566x150.png 566w" sizes="(max-width: 479px) 41vw, 150px" alt="" className="image-13" />
-            </a>
-            <a href="https://freckbeauty.com/my-account/" className="w-inline-block">
-              <img src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Account.png" width="25" height="25" alt="" className="image-4" />
-            </a>
-            <a href="https://freckbeauty.com/cart/" className="w-inline-block">
-              <img src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" width="25" height="25" alt="" className="image-2" />
-            </a>
-          </div>
-          <div className="mobile-nav-second-div">
-            <a href="http://freck-mobile-redesign.webflow.io/shop-freck" className="no-underline">SHOP</a><a href="https://freckbeauty.com/about/" className="no-underline">ABOUT</a><a href="https://freckbeauty.com/blog/" className="no-underline">BLOG</a><a href="https://freckbeauty.com/contact/" className="no-underline">CONTACT</a><a href="https://freckbeauty.com/my-account/" className="no-underline">ACCOUNT</a>
+          <div className="nav">
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+            <Link href="shop-freck">
+              <a>Shop Freck</a>
+            </Link>
+            <Link href="blog">
+              <a>Blog</a>
+            </Link>
+            <Link href="about">
+              <a>About</a>
+            </Link>
+            <Link href="contact">
+              <a>Contact</a>
+            </Link>
+            <Link href="my-account">
+              <a>Log In</a>
+            </Link>
+            <Link href="cart">
+              <a>
+                <img className="cart" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" alt="cart"/>
+              </a>
+            </Link>
           </div>
         </div>
         <div className="hamburger" onClick={this.toggleClass}>
@@ -179,7 +160,7 @@ class HomeHeader extends Component {
             margin: 6px 0;
             transition: 0.4s;
           }
-          #header > .nav > a {
+          #home-header > .nav > a {
             padding-left: 25px;
           }
           .cart {
@@ -203,17 +184,12 @@ class HomeHeader extends Component {
             padding-left: 20px;
           }
           @media only screen and (max-width: 421px) {
-            .hamburger, .logo {
+            #home-header, .hamburger, .logo {
               display: none;
             }
           }
           @media only screen and (min-width: 1003px) {
             .hamburger {
-              display: none;
-            }
-          }
-          @media only screen and (min-width: 421px) {
-            .mobile-nav-section {
               display: none;
             }
           }
