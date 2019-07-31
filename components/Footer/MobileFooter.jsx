@@ -34,7 +34,11 @@ export default function MobileFooter() {
         img {
           padding-top: 30px;
         }
-        
+        @media only screen and (min-width: 421px) {
+          #mobile-footer {
+            display: none;
+          }
+        }
       `}</style>
     </div>
   );
