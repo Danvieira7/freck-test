@@ -65,6 +65,7 @@ class ProductList extends Component {
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						margin-top: -35px;
 						background-color: rgba(255, 255, 255, 0.88);
 						height: 14%;
 						width: 100%;
@@ -85,6 +86,10 @@ class ProductList extends Component {
 						max-width: 350px;
 						padding: 9px 15px;
 						border: none;
+						margin-bottom: 10px;
+					}
+					button:focus {
+						outline: 0;
 					}
 				`}</style>
 			</div>

@@ -44,8 +44,8 @@ class FooterOptIn extends Component {
       display: this.state.subscribed ? 'block' : 'none'
     }
     return (
-      <div>
-        <div id="opt-in">
+      <div id="opt-in">
+        <div>
           <h3>Enter the Freck Fam</h3>
           <br/>
           <p>We send email updates on stuff you'll probably want to know about: new products, promos, international shipping, parties, travel guides, & playlists. Welcome to the Freck Fam.</p>
@@ -80,6 +80,11 @@ class FooterOptIn extends Component {
           }
           button {
             margin-top: 15px;
+          }
+          @media only screen and (max-width: 420px) {
+            #opt-in {
+              display: none;
+            }
           }
         `}</style>
       </div>

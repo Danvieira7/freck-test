@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function FooterNav() {
   return (
-    <div>
+    <div id="footer-nav-container">
       <div id="footer-nav">
         <div className="footer-column one">
           <p className="footer-nav-title">SHOP FRECK</p>
@@ -122,6 +122,11 @@ export default function FooterNav() {
         </div>
       </div>
       <style jsx>{`
+        @media only screen and (max-width: 420px) {
+          #footer-nav-container {
+            display: none;
+          }
+        }
         #footer-nav {
           display: flex;
           flex-wrap: wrap;

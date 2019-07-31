@@ -25,7 +25,7 @@ class RecentNews extends Component {
 
   render() {
     return (
-    <div>
+    <div id="recent-news">
       <p className="footer-nav-title">RECENT NEWS</p>
       {this.state.posts.map(post => (
         <div className="card" key={post.id}>
@@ -49,6 +49,11 @@ class RecentNews extends Component {
         </Link>
       </div>
       <style jsx>{`
+        @media only screen and (max-width: 420px) {
+          #recent-news {
+            display: none;
+          }
+        }
         a {
           color: #fff;
           text-decoration: none;
