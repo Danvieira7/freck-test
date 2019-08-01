@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer/Footer';
 import fetch from 'isomorphic-unfetch';
+import MobileHero from '../components/Shop/MobileHero';
 import ProductList from '../components/ProductList';
 import { server } from '../config/server';
 
@@ -31,6 +32,7 @@ class ShopFreck extends Component {
           <div>
           </div>
         </div>
+        <MobileHero />
         <div className="product-container">
           {products.length ? (
             products.map(
@@ -79,6 +81,18 @@ class ShopFreck extends Component {
             min-height: 900px;
             width: 100%;
             margin-top: 10%;
+          }
+          @media only screen and (max-width: 820px) {
+            .hero-container {
+              display: none;
+            }
+            #products-hero {
+              background-position: 0% 0%;
+              min-height: 300px;
+              width: 100%;
+              margin-top: 0;
+              margin-bottom: -55px;
+            }
           }
         `}</style>
       </div>

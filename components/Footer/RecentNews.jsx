@@ -49,11 +49,6 @@ class RecentNews extends Component {
         </Link>
       </div>
       <style jsx>{`
-        @media only screen and (max-width: 420px) {
-          #recent-news {
-            display: none;
-          }
-        }
         a {
           color: #fff;
           text-decoration: none;

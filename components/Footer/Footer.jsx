@@ -7,16 +7,18 @@ import RecentNews from './RecentNews';
 
 export default function Footer() {
   return (
-    <div id="container">
+    <div>
       <MobileFooter />
-      <div>
-        <FooterOptIn />
-      </div>
-      <div>
-        <FooterNav />
-      </div>
-      <div>
-        <RecentNews />
+      <div id="container">
+        <div>
+          <FooterOptIn />
+        </div>
+        <div>
+          <FooterNav />
+        </div>
+        <div>
+          <RecentNews />
+        </div>
       </div>
     <style global jsx>{`
       .footer-nav-title {
@@ -25,7 +27,7 @@ export default function Footer() {
       }
     `}</style>
     <style jsx>{`
-      @media only screen and (min-width: 421px) {
+      @media only screen and (min-width: 822px) {
         #container {
           display: grid;
           grid-template-rows: 25% 50% 25%;
@@ -35,9 +37,9 @@ export default function Footer() {
           padding: 20px 20px;
         }
       }
-      @media only screen and (max-width: 420px) {
+      @media only screen and (max-width: 821px) {
         #container {
-          background-color: #f6f8f6;
+          display: none;
         }
       }
     `}</style>

@@ -95,7 +95,7 @@ function MainHeader() {
             background-color: #E5D9C9;
           }
         }
-        @media only screen and (max-width: 420px) {
+        @media only screen and (max-width: 821px) {
           #main-header {
             display: none;
           }

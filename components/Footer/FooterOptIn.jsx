@@ -81,11 +81,6 @@ class FooterOptIn extends Component {
           button {
             margin-top: 15px;
           }
-          @media only screen and (max-width: 420px) {
-            #opt-in {
-              display: none;
-            }
-          }
         `}</style>
       </div>
     );
