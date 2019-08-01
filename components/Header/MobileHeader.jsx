@@ -78,7 +78,7 @@ export default function MobileHeader() {
           width: 25px;
         }
         .mobile-second-nav {
-          padding: 10px 0;
+          padding: 10px 0 0 0;
           margin-bottom: 10px;
           overflow: auto;
         }

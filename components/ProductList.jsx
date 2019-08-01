@@ -83,6 +83,7 @@ class ProductList extends Component {
 						background-color: #A73E24;
 						color: #fff;
 						width: 100%;
+						min-width: 250px;
 						max-width: 350px;
 						padding: 9px 15px;
 						border: none;
@@ -105,6 +106,19 @@ class ProductList extends Component {
 						}
 						.out-of-stock {
 							margin-top: -10px;
+						}
+					}
+					@media only screen and (max-width: 820px) {
+						.product-container {
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: center;
+							width: 250px;
+							margin: 0 20px;
+						}
+						img, .product-image {
+							max-width: 250px;
+							max-height: 250px;
 						}
 					}
 				`}</style>

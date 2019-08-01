@@ -103,6 +103,7 @@ class HomeHeader extends Component {
           }
           html, body {
             overflow-x: hidden;
+            font-family: Helvetica;
           }
         `}
         </style>

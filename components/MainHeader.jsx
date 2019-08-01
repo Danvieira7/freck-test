@@ -48,6 +48,7 @@ function MainHeader() {
         }
         html, body {
           overflow-x: hidden;
+          font-family: Helvetica;
         }
       `}
       </style>
