@@ -19,8 +19,11 @@
     "isomorphic-fetch": "^2.2.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.1.0",
+    "next-redux-wrapper": "^3.0.0-alpha.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
     "request": "^2.88.0",
     "woocommerce-api": "^1.4.2"
   }
