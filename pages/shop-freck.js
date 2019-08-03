@@ -94,6 +94,12 @@ class ShopFreck extends Component {
               margin-bottom: -55px;
             }
           }
+          @media only screen and (min-width: 520px) and (max-width: 820px) {
+            #products-hero {
+              min-height: 600px;
+              margin-top: 20px;
+            }
+          }
         `}</style>
       </div>
     );

@@ -9,8 +9,8 @@ function Index() {
   return (
     <div>
       <HomeHero />
-      <CactusSection />
       <FreckSection />
+      <CactusSection />
       <OozeSection />
       <Footer />
     <style global jsx>{`
