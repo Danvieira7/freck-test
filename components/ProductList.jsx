@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
 
 class ProductList extends Component {
 	constructor(props) {
@@ -31,10 +30,7 @@ class ProductList extends Component {
 					<div className="out-of-stock" style={outOfStock}>
 						OUT OF STOCK
 					</div>
-					<Link
-						href={`/product`}
-						as={`/product/${product.slug}`}
-					>
+					<a href={`https://freckbeauty.com/product/${product.slug}`}>
 						<img
 							src={product.images[0].src}
 							alt="Product image"
@@ -42,12 +38,14 @@ class ProductList extends Component {
 							onMouseEnter={this.toggleHover}
 							onMouseLeave={this.toggleHover}
 						/>
-					</Link>
+					</a>
 				</div>
 				<div className="product-heading">
+					<a href={`https://freckbeauty.com/product/${product.slug}`}>
+							<h3>{product.name}</h3>
+							<h5 className="product-description">{productDescription}</h5>
+					</a>
 					<a href={`https:freckbeauty.com/cart/?add-to-cart=${product.id}&quantity=1`}>
-						<h3>{product.name}</h3>
-						<h5 className="product-description">{productDescription}</h5>
 						<button>
 							${product.price} — ADD
 						</button>

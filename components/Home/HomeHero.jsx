@@ -1,4 +1,4 @@
-import HomeHeader from './HomeHeader';
+import HomeHeader from '../Header/HomeHeader';
 
 export default function HomeHero() {
   return (

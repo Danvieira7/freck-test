@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Favicon from './Favicon';
 import MobileHeader from './Header/MobileHeader';
+import CartIcon from './Header/CartIcon';
 
 function MainHeader() {
   return (
@@ -35,9 +36,7 @@ function MainHeader() {
           <Link href="my-account">
             <a>Log In</a>
           </Link>
-          <Link href="cart">
-            <a>Cart</a>
-          </Link>
+          <CartIcon />
         </div>
       </div>
       <style jsx global>{`

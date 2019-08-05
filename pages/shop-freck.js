@@ -29,7 +29,7 @@ class ShopFreck extends Component {
           <div id="left-hero">
             <img src="https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2018/10/f-dot.svg" alt="F Dot Logo"/>
           </div>
-          <div>
+          <div id="carousel">
           </div>
         </div>
         <MobileHero />
@@ -48,6 +48,8 @@ class ShopFreck extends Component {
         <Footer />
         <style jsx>{`
           .hero-container {
+            display: flex;
+            flex-wrap: wrap;
             margin-bottom: -5.5px;
           }
           #left-hero {
@@ -59,6 +61,14 @@ class ShopFreck extends Component {
             height: 720px;
             display: flex;
             align-items: center;
+          }
+          #carousel {
+            background: url('https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2019/04/Freck_Sml-Open_Flatlay-Shadow_R__676x676.jpg');
+            background-repeat: no-repeat;
+            background-position: 0% 50%;
+            background-size: cover;
+            width: 50%;
+            height: 720px;
           }
           img {
             width: 21%;

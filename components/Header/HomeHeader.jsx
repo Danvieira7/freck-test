@@ -3,7 +3,9 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Favicon from '../Favicon';
 import MobileHeader from '../Header/MobileHeader';
-import Submenu from '../Submenu';
+import CartIcon from './CartIcon';
+import Submenu from '../Header/Submenu';
+
 class HomeHeader extends Component {
   constructor(props) {
     super(props);
@@ -68,11 +70,7 @@ class HomeHeader extends Component {
               <Link href="my-account">
                 <a>Log In</a>
               </Link>
-              <Link href="cart">
-                <a>
-                  <img className="cart" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" alt="cart"/>
-                </a>
-              </Link>
+              <CartIcon />
             </div>
           </div>
           <div className="hamburger" style ={fixedHamburger} onClick={this.toggleClass}>
@@ -154,22 +152,6 @@ class HomeHeader extends Component {
             width: 20px;
             margin-bottom: -2px;
           }
-          // .submenu {
-          //   background-color: #f6f8f6;
-          //   position: fixed;
-          //   width: 40%;
-          //   height: 100vh;
-          //   top: 0px;
-          //   left: 52.5%;
-          //   z-index: 1000;
-          // }
-          // .submenu-icons {
-          //   display: flex;
-          //   justify-content: space-around;
-          // }
-          // .submenu-item {
-          //   padding-left: 20px;
-          // }
           @media only screen and (max-width: 421px) {
             #home-header, .hamburger, .logo {
               display: none;
