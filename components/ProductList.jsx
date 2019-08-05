@@ -55,7 +55,7 @@ class ProductList extends Component {
 				</div>
 				<style jsx>{`
 					.product-container {
-						margin: 0 10px;
+						margin: 0 20px;
 					}
 					img, .product-image {
 						max-width: 450px;
@@ -110,18 +110,17 @@ class ProductList extends Component {
 							display: flex;
 							flex-wrap: wrap;
 							justify-content: center;
-							padding: 10px;
-							max-width: 150px;
+							max-width: 125px;
 						}
 						img, .product-image {
-							max-width: 150px;
-							max-height: 150px;
+							max-width: 125px;
+							max-height: 125px;
 						}
 						.out-of-stock {
 							margin-top: -10px;
 						}
 					}
-					@media only screen and (max-width: 820px) {
+					@media only screen and (min-width: 421px) and (max-width: 820px) {
 						.product-container {
 							display: flex;
 							flex-wrap: wrap;
