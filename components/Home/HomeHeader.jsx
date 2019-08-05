@@ -17,6 +17,10 @@ class HomeHeader extends Component {
   }
 
   render() {
+    const fixedHamburger = {
+      position: this.state.transform ? 'fixed' : '',
+      left: this.state.transform ? '94%' : '',
+    }
     const bar1 = {
       transform: this.state.transform ? 'rotate(-45deg) translate(-9px, 6px)' : ''
     }
@@ -43,57 +47,59 @@ class HomeHeader extends Component {
               <img className="logo" src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" alt="Freck logo"/>
             </a>
           </Link>
-          <div className="nav">
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-            <Link href="shop-freck">
-              <a>Shop Freck</a>
-            </Link>
-            <Link href="blog">
-              <a>Blog</a>
-            </Link>
-            <Link href="about">
-              <a>About</a>
-            </Link>
-            <Link href="contact">
-              <a>Contact</a>
-            </Link>
-            <Link href="my-account">
-              <a>Log In</a>
-            </Link>
-            <Link href="cart">
-              <a>
-                <img className="cart" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" alt="cart"/>
-              </a>
-            </Link>
+          <div>
+            <div className="nav">
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+              <Link href="shop-freck">
+                <a>Shop Freck</a>
+              </Link>
+              <Link href="blog">
+                <a>Blog</a>
+              </Link>
+              <Link href="about">
+                <a>About</a>
+              </Link>
+              <Link href="contact">
+                <a>Contact</a>
+              </Link>
+              <Link href="my-account">
+                <a>Log In</a>
+              </Link>
+              <Link href="cart">
+                <a>
+                  <img className="cart" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" alt="cart"/>
+                </a>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="hamburger" onClick={this.toggleClass}>
-          <div className="bar1" style={bar1}></div>
-          <div className="bar2" style={bar2}></div>
-          <div className="bar3" style={bar3}></div>
-        </div>
-        <div className="submenu" style={toggle}>
-          <div className="submenu-icons">
-            <div>My Account Icon</div>
-            <div>Cart Icon</div>
+          <div className="hamburger" style ={fixedHamburger} onClick={this.toggleClass}>
+            <div className="bar1" style={bar1}></div>
+            <div className="bar2" style={bar2}></div>
+            <div className="bar3" style={bar3}></div>
           </div>
-          <div className="submenu-item">
-            SHOP BEAUTY
-            <div></div>
-            <div></div>
+          <div className="submenu" style={toggle}>
+            <div className="submenu-icons">
+              <div>My Account Icon</div>
+              <div>Cart Icon</div>
+            </div>
+            <div className="submenu-item">
+              SHOP BEAUTY
+              <div></div>
+              <div></div>
+            </div>
+            <div className="submenu-item">
+              BEST SELLERS
+              <div></div>
+              <div></div>
+            </div>
+            <div className="submenu-item">ABOUT</div>
+            <div className="submenu-item">OOZE</div>
+            <div className="submenu-item">CONTACT</div>
+            <div className="submenu-item">ACCOUNT</div>
+            <div className="submenu-item">Freck Logo</div>
           </div>
-          <div className="submenu-item">
-            BEST SELLERS
-            <div></div>
-            <div></div>
-          </div>
-          <div className="submenu-item">ABOUT</div>
-          <div className="submenu-item">OOZE</div>
-          <div className="submenu-item">CONTACT</div>
-          <div className="submenu-item">ACCOUNT</div>
-          <div className="submenu-item">Freck Logo</div>
         </div>
         <style jsx global>{`
           * { 
@@ -145,9 +151,8 @@ class HomeHeader extends Component {
             }
           }
           .hamburger {
-            display: inline-block;
             cursor: pointer;
-            padding-right: 1.5%;
+            padding-right: 2.5%;
           }
           @media only screen (min-width: 1003px) {
             .hamburger {

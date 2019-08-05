@@ -87,7 +87,7 @@ export default function MobileHeader() {
           text-decoration: none;
           color: #000;
         }
-        @media only screen and (min-width: 821px) {
+        @media only screen and (min-width: 421px) {
           .mobile-nav {
             display: none;
           }

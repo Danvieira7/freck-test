@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import App, { Container } from 'next/app';
 import withRedux from 'next-redux-wrapper';
 
+// Change 'foo' case with 'counter cases
+
 const reducer = (state = {foo: ''}, action) => {
   switch (action.type) {
     case 'FOO':
@@ -25,6 +27,8 @@ const reducer = (state = {foo: ''}, action) => {
 const makeStore = (initialState, options) => {
   return createStore(reducer, initialState);
 }
+
+// To continue Redux installation, follow this guide: https://github.com/kirill-konshin/next-redux-wrapper#how-it-works
 
 class MyApp extends App {
 
