@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Favicon from '../Favicon';
 import MobileHeader from '../Header/MobileHeader';
+import Submenu from '../Submenu';
 class HomeHeader extends Component {
   constructor(props) {
     super(props);
@@ -18,17 +19,17 @@ class HomeHeader extends Component {
 
   render() {
     const fixedHamburger = {
-      position: this.state.transform ? 'fixed' : '',
-      left: this.state.transform ? '94%' : '',
+      position: this.state.transform ? 'fixed' : null,
+      left: this.state.transform ? '94%' : null,
     }
     const bar1 = {
-      transform: this.state.transform ? 'rotate(-45deg) translate(-9px, 6px)' : ''
+      transform: this.state.transform ? 'rotate(-45deg) translate(-9px, 6px)' : null
     }
     const bar2 = {
-      opacity: this.state.transform ? '0' : ''
+      opacity: this.state.transform ? '0' : null
     }
     const bar3 = {
-      transform: this.state.transform ? 'rotate(45deg) translate(-8px, -8px)' : ''
+      transform: this.state.transform ? 'rotate(45deg) translate(-8px, -8px)' : null
     }
     const toggle = {
       display: this.state.transform ? 'block' : 'none'
@@ -79,27 +80,7 @@ class HomeHeader extends Component {
             <div className="bar2" style={bar2}></div>
             <div className="bar3" style={bar3}></div>
           </div>
-          <div className="submenu" style={toggle}>
-            <div className="submenu-icons">
-              <div>My Account Icon</div>
-              <div>Cart Icon</div>
-            </div>
-            <div className="submenu-item">
-              SHOP BEAUTY
-              <div></div>
-              <div></div>
-            </div>
-            <div className="submenu-item">
-              BEST SELLERS
-              <div></div>
-              <div></div>
-            </div>
-            <div className="submenu-item">ABOUT</div>
-            <div className="submenu-item">OOZE</div>
-            <div className="submenu-item">CONTACT</div>
-            <div className="submenu-item">ACCOUNT</div>
-            <div className="submenu-item">Freck Logo</div>
-          </div>
+          {this.state.transform ? <Submenu style={toggle} /> : null}
         </div>
         <style jsx global>{`
           * { 
@@ -173,22 +154,22 @@ class HomeHeader extends Component {
             width: 20px;
             margin-bottom: -2px;
           }
-          .submenu {
-            background-color: #f6f8f6;
-            position: fixed;
-            width: 40%;
-            height: 100vh;
-            top: 0px;
-            left: 52.5%;
-            z-index: 1000;
-          }
-          .submenu-icons {
-            display: flex;
-            justify-content: space-around;
-          }
-          .submenu-item {
-            padding-left: 20px;
-          }
+          // .submenu {
+          //   background-color: #f6f8f6;
+          //   position: fixed;
+          //   width: 40%;
+          //   height: 100vh;
+          //   top: 0px;
+          //   left: 52.5%;
+          //   z-index: 1000;
+          // }
+          // .submenu-icons {
+          //   display: flex;
+          //   justify-content: space-around;
+          // }
+          // .submenu-item {
+          //   padding-left: 20px;
+          // }
           @media only screen and (max-width: 421px) {
             #home-header, .hamburger, .logo {
               display: none;
