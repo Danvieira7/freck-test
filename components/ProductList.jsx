@@ -45,11 +45,18 @@ class ProductList extends Component {
 					</Link>
 				</div>
 				<div className="product-heading">
-					<h3>{product.name}</h3>
-					<h5 className="product-description">{productDescription}</h5>
-					<button onClick={() => console.log(`${product.id} added to cart!`)}>${product.price} — ADD</button>
+					<a href={`https:freckbeauty.com/cart/?add-to-cart=${product.id}&quantity=1`}>
+						<h3>{product.name}</h3>
+						<h5 className="product-description">{productDescription}</h5>
+						<button>
+							${product.price} — ADD
+						</button>
+					</a>
 				</div>
 				<style jsx>{`
+					.product-container {
+						margin: 0 10px;
+					}
 					img, .product-image {
 						max-width: 450px;
 						max-height: 450px;
@@ -73,18 +80,21 @@ class ProductList extends Component {
 						top: 50%;
 					}
 					.product-heading {
+						width: 100%;
 						text-align: center;
 						text-transform: uppercase;
 					}
 					.product-description {
 						line-height: 20px;
 					}
+					a {
+						text-decoration: none;
+						color: #000;
+					}
 					button {
 						background-color: #A73E24;
 						color: #fff;
 						width: 100%;
-						min-width: 250px;
-						max-width: 350px;
 						padding: 9px 15px;
 						border: none;
 						margin-bottom: 10px;
@@ -92,13 +102,16 @@ class ProductList extends Component {
 					button:focus {
 						outline: 0;
 					}
+					button:hover {
+						cursor: pointer;
+					}
 					@media only screen and (max-width: 420px) {
 						.product-container {
 							display: flex;
 							flex-wrap: wrap;
 							justify-content: center;
-							width: 150px;
 							padding: 10px;
+							max-width: 150px;
 						}
 						img, .product-image {
 							max-width: 150px;
