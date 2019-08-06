@@ -23,6 +23,9 @@ export default function Footer() {
     <style global jsx>{`
       .footer-nav-title {
         color: #9a8470;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
         padding-bottom: 10px;
       }
     `}</style>

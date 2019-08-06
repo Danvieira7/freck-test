@@ -45,10 +45,13 @@ class RecentNews extends Component {
       ))}
       <div>
         <Link>
-            <a>SEE ALL</a>
+            <a className="see-all">SEE ALL</a>
         </Link>
       </div>
       <style jsx>{`
+        #recent-news {
+          padding-left: 25px;
+        }
         a {
           color: #fff;
           text-decoration: none;
@@ -70,6 +73,12 @@ class RecentNews extends Component {
         } 
         img {
           height: 75px;
+        }
+        .see-all {
+          color: #9a8470;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          letter-spacing: 4px;
         }
       `}</style>
     </div>

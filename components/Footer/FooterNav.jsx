@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RightArrow from './RightArrow';
 
 export default function FooterNav() {
   return (
@@ -7,110 +8,97 @@ export default function FooterNav() {
         <div className="footer-column one">
           <p className="footer-nav-title">SHOP FRECK</p>
           <p>
-            <Link>
-              <a>Freck OG</a>
-            </Link> 
+            <a>Freck OG</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Foreclay</a>
-            </Link>
+            <a>Foreclay</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Rich Bitch</a>
-            </Link>
+            <a>Rich Bitch</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>So Jelly</a>
-            </Link>
+            <a>So Jelly</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Lil Prick</a>
-            </Link>
+            <a>Lil Prick</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Cactus Water</a>
-            </Link>
+            <a>Cactus Water</a>
+            <RightArrow />
           </p>
         </div>
         <div className="footer-column two">
           <p className="footer-nav-title">CUSTOMER SERVICE</p>
           <p>
-            <Link>
-              <a>hi@freckbeauty.com</a>
-            </Link>
+            <a>
+                <img src="https://freckbeauty.com/wp-content/uploads/2019/08/email-16.png" />
+                &nbsp;
+                hi@freckbeauty.com
+            </a>
           </p>
           <p>
-            <Link>
-              <a>213.632.6977</a>
-            </Link>
+            <a>
+                <img className="phone" src="https://freckbeauty.com/wp-content/uploads/2019/08/phone-42-16.png" />
+                &nbsp;
+                213.632.6977
+            </a>
           </p>
           <p>MON – SAT | 9 AM – 6 PM PDT</p>
-          <img src="" alt="SSL certificate"/>
+          <img className="ssl" src="https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2018/10/ssl-badge-2-32.png" alt="SSL certificate" />
         </div>
         <div className="footer-column three">
           <p className="footer-nav-title">BLOG</p>
           <p>
-            <Link>
-              <a>Beauty</a>
-            </Link>
+            <a>Beauty</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Culture</a>
-            </Link>
+            <a>Culture</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Business</a>
-            </Link>
+            <a>Business</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Press</a>
-            </Link>
+            <a>Press</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Travel</a>
-            </Link>
+            <a>Travel</a>
+            <RightArrow />
           </p>
         </div>
         <div className="footer-column four">
           <p className="footer-nav-title">GET FRECKED</p>
           <p>
-            <Link>
-              <a>About</a>
-            </Link>
+            <a>About</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Stores</a>
-            </Link>
+            <a>Stores</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Return Policy</a>
-            </Link>
+            <a>Return Policy</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-                <a>Terms and Conditions</a>
-            </Link>
+            <a>Terms and Conditions</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-              <a>Privacy Policy</a>
-            </Link>
+            <a>Privacy Policy</a>
+            <RightArrow />
           </p>
           <p>
-            <Link>
-                <a>FAQ</a>
-            </Link>
+            <a>FAQ</a>
+            <RightArrow />
           </p>
         </div>
         <div className="logo-container">
@@ -130,11 +118,18 @@ export default function FooterNav() {
         .footer-column {
           padding-bottom: 20px;
         }
+        .phone {
+          margin-left: -3px;
+        }
+        .ssl {
+          margin-left: -5.5px;
+          width: 27.5px;
+        }
         .two, .three {
-          padding-right: 35px;
+          padding-right: 30px;
         }
         .two {
-          padding-left: 35px;
+          padding-left: 30px;
         }
         .separator {
           height: 1px;
