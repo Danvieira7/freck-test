@@ -13,7 +13,7 @@ export default function Footer() {
         <div>
           <FooterOptIn />
         </div>
-        <div>
+        <div id="nav">
           <FooterNav />
         </div>
         <div>
@@ -30,6 +30,9 @@ export default function Footer() {
       }
     `}</style>
     <style jsx>{`
+      #nav {
+        padding: 0 5px;
+      }
       @media only screen and (min-width: 822px) {
         #container {
           display: grid;

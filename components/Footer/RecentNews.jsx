@@ -50,7 +50,7 @@ class RecentNews extends Component {
       </div>
       <style jsx>{`
         #recent-news {
-          padding-left: 25px;
+          padding-left: 5px;
         }
         a {
           color: #fff;
