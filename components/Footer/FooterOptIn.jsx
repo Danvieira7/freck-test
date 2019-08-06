@@ -78,8 +78,24 @@ class FooterOptIn extends Component {
           p {
             padding-bottom: 20px;
           }
+          input {
+            padding: 8.5px 10px;
+            margin-top: 4px;
+          }
           button {
             margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.2em;
+            border-radius: 0px;
+            background: #a73e24;
+            border-color: #a73e24;
+            color: #f7f8f6;
+            padding: 8.5px 40px;
+          }
+          h3 {
+            font-family: 'Eksell Display Medium';
+            src: url('../.next/static/fonts/Eksell-Display-Medium.otf');
+            font-size: 28px;
           }
         `}</style>
       </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import MainHeader from '../components/MainHeader';
+import MainHeader from '../components/Header/MainHeader';
 import Footer from '../components/Footer/Footer';
 
 class Contact extends Component {

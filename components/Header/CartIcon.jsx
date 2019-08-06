@@ -10,6 +10,10 @@ export default function CartIcon() {
             width: 20px;
             margin-bottom: -2px;
           }
+          a:hover {
+            opacity: 0.6;
+            color: #b86756;
+          }
         `}</style>
       </a>
     </Link>

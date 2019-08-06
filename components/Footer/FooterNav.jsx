@@ -126,7 +126,6 @@ export default function FooterNav() {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          font-weight: 900;
         }
         .footer-column {
           padding-bottom: 20px;

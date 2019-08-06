@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import Favicon from '../Favicon';
-import MobileHeader from '../Header/MobileHeader';
+import Favicon from './Favicon';
+import MobileHeader from './MobileHeader';
 import CartIcon from './CartIcon';
-import Submenu from '../Header/Submenu';
+import Submenu from './Submenu';
 
 class HomeHeader extends Component {
   constructor(props) {

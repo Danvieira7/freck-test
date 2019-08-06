@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MainHeader from '../components/MainHeader';
+import MainHeader from '../components/Header/MainHeader';
 import Footer from '../components/Footer/Footer';
 import fetch from 'isomorphic-unfetch';
 import MobileHero from '../components/Shop/MobileHero';

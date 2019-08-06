@@ -1,4 +1,4 @@
-import MainHeader from '../components/MainHeader';
+import MainHeader from '../components/Header/MainHeader';
 import BlogHero from '../components/BlogHero';
 import Footer from '../components/Footer/Footer';
 import PostList from '../components/PostList';
