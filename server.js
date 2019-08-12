@@ -15,10 +15,13 @@ const WooCommerceAPI = require('woocommerce-api');
 
 const WooCommerce = new WooCommerceAPI({
 	url: process.env.BASE_URL,
+	headers: {
+		Authorization: 'Basic Y2tfMWE0ODFkYTMzNTkxMWZkY2E3MWMzMjM4YTQ4NjJhZGZiZjgyNDE2YTpjc183M2QwMjhmMzAwZDIzMmU5YjQzMzhmOTc3YmM5ZmU3YmFmNjNjMzkx'
+		},
 	consumerKey: process.env.KEY,
 	consumerSecret: process.env.SECRET,
 	wpAPI: true,
-	version: 'wc/v1',
+	version: 'wc/v3',
 	queryStringAuth: true
 });
 

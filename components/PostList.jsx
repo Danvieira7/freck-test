@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -12,7 +12,7 @@ class PostList extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://freckbeauty.com/wp-json/wp/v2/posts?_embed")
+    axios.get('https://freckbeauty.com/wp-json/wp/v2/posts?_embed')
       .then(posts => {
         this.setState({
           posts: posts.data

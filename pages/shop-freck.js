@@ -4,7 +4,7 @@ import Footer from '../components/Footer/Footer';
 import fetch from 'isomorphic-unfetch';
 import MobileHero from '../components/Shop/MobileHero';
 import ProductList from '../components/Shop/ProductList';
-import { server } from '../config/server';
+// import { server } from '../config/server';
 
 class ShopFreck extends Component {
   constructor(props) {
@@ -13,7 +13,15 @@ class ShopFreck extends Component {
   }
 
   static async getInitialProps() {
-    const res = await fetch(`${server}/api/products`);
+    const res = await fetch(`https://freckbeauty.com/wp-json/wc/v3/products`, {
+      mode: 'cors',
+      'cache-control': 'no-cache',
+      headers: {
+          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Authorization: 'Basic Y2tfMWE0ODFkYTMzNTkxMWZkY2E3MWMzMjM4YTQ4NjJhZGZiZjgyNDE2YTpjc183M2QwMjhmMzAwZDIzMmU5YjQzMzhmOTc3YmM5ZmU3YmFmNjNjMzkx'
+      }
+    });
     const data = await res.json();
     return {
       products: data

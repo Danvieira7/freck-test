@@ -22,7 +22,7 @@ class ProductList extends Component {
 			transition: this.state.hover ? 'filter .6s, opacity .6s, transform .6s, -webkit-filter .6s, -webkit-transform .6s' : ''
 		}
 		const outOfStock = {
-			opacity: product.in_stock ? '0' : '1'
+			opacity: product.stock_status === 'outofstock' ? '1' : '0'
 		}
 		return (
 			<div className="product-container">
@@ -45,7 +45,7 @@ class ProductList extends Component {
 							<h3>{product.name}</h3>
 							<h5 className="product-description">{productDescription}</h5>
 					</a>
-					<a href={`https:freckbeauty.com/cart/?add-to-cart=${product.id}&quantity=1`}>
+					<a href={`https://freckbeauty.com/cart/?add-to-cart=${product.id}&quantity=1`}>
 						<button>
 							${product.price} — ADD
 						</button>
