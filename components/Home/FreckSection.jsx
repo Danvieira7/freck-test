@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function FreckSection() {
   return (
-    <container>
+    <>
       <div>
         <img src="https://mk0freckbeautyfwjku5.kinstacdn.com/wp-content/uploads/2018/11/home-og.jpg" alt="Freck model and product"/>
       </div>
@@ -55,6 +55,6 @@ export default function FreckSection() {
           color: #a73e24;;
         }
       `}</style>
-    </container>
+    </>
   );
 };

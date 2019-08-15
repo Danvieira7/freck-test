@@ -44,7 +44,7 @@ class RecentNews extends Component {
         </div>
       ))}
       <div>
-        <Link>
+        <Link href="#">
             <a className="see-all">SEE ALL</a>
         </Link>
       </div>
