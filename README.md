@@ -28,7 +28,7 @@ touch .env
 Using environment variables found in Team Freck 1Password, add environment variables to .env file.  
 Save modifications.  
 To run app locally, in Terminal, type:  
-
+    
 ```
 node start.js
 ```

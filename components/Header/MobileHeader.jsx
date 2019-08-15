@@ -4,46 +4,46 @@ export default function MobileHeader() {
   return(
     <div className="mobile-nav">
       <div className="nav-div">
-        <Link>
-          <a href="#">
+        <Link href="#">
+          <a>
             <img className="mobile-icon-1 twenty-three" src="https://freckbeauty.com/wp-content/uploads/2019/07/Freck-dots_dots.png" alt="" />
           </a>
         </Link>
-        <Link>
-          <a href="#">
+        <Link href="#">
+          <a>
             <img className="mobile-icon-2 twenty-three" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Search.png" height="23" width="23" alt="" />
           </a>
         </Link>
-        <Link>
+        <Link href="#">
           <a href="/">
             <img className="mobile-header-logo" src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" width="150" sizes="(max-width: 479px) 41vw, 150px" alt="" />
           </a>
         </Link>
-        <Link>
+        <Link href="#">
           <a href="/my-account">
             <img className="mobile-icon-3 twenty-five" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Account.png" width="25" height="25" alt="" />
           </a>
         </Link>
-        <Link>
+        <Link href="#">
           <a href="/cart">
             <img className="mobile-icon-4 twenty-five" src="https://freckbeauty.com/wp-content/uploads/2019/07/freck-mobile_Bag.png" width="25" height="25" alt="" />
           </a>
         </Link>
       </div>
       <div className="mobile-second-nav">
-        <Link>
+        <Link href="#">
           <a href="/shop-freck">SHOP</a>
         </Link>
-        <Link>
+        <Link href="#">
           <a href="/about">ABOUT</a>
         </Link>
-        <Link>
+        <Link href="#">
           <a href="/blog">BLOG</a>
         </Link>
-        <Link>
+        <Link href="#">
           <a href="/contact">CONTACT</a>
         </Link>
-        <Link>
+        <Link href="#">
           <a href="/my-account">ACCOUNT</a>
         </Link>
       </div>

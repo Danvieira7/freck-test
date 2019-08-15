@@ -4,7 +4,6 @@ import Footer from '../components/Footer/Footer';
 import fetch from 'isomorphic-unfetch';
 import MobileHero from '../components/Shop/MobileHero';
 import ProductList from '../components/Shop/ProductList';
-// import { server } from '../config/server';
 
 class ShopFreck extends Component {
   constructor(props) {

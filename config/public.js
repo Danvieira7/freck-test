@@ -1,6 +1,7 @@
 import 'isomorphic-fetch';
+import {server} from './server';
 
-const ROOT_URL = 'http://localhost:3000';
+const ROOT_URL = `${server}`;
 
 async function sendRequest(path, options = {}) {
   const headers = {
