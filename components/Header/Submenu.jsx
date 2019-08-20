@@ -1,20 +1,24 @@
+import Link from 'next/link';
+  
 export default function Submenu() {
   return (
     <div className="submenu">
       <div className="submenu-icons">
         <div>
-          <a href="">
-          <img className="account icon" src="https://uploads-ssl.webflow.com/5cdc55a95b0a2bf4bf7ea924/5cdca51f95678d23e8f296d3_freck-mobile_Account.png" />
+          <a href="https://freckbeauty.com/my-account">
+            <img className="account icon" src="https://uploads-ssl.webflow.com/5cdc55a95b0a2bf4bf7ea924/5cdca51f95678d23e8f296d3_freck-mobile_Account.png" />
           </a>
         </div>
         <div>
-          <a href="">
+          <a href="https://freckbeauty.com/cart">
           <img className="cart icon" src="https://uploads-ssl.webflow.com/5cdc55a95b0a2bf4bf7ea924/5cdca51edd56264e977a632b_freck-mobile_Bag.png" />
           </a>
         </div>
       </div>
       <div className="submenu-item">
-        <a href="">SHOP BEAUTY</a>
+        <Link href="/">
+          <a>SHOP BEAUTY</a>
+        </Link>
         <div></div>
         <div></div>
       </div>
@@ -24,17 +28,17 @@ export default function Submenu() {
             BEST SELLERS
           </summary>
           <p>
-            <a href="">
+            <a href="https://freckbeauty.com/product/freck-og">
               FRECK OG
             </a>
           </p>
           <p>
-            <a href="">
+            <a href="https://freckbeauty.com/product/so-jelly">
               SO JELLY
             </a>
           </p>
           <p>
-            <a href="">
+            <a href="https://freckbeauty.com/product/rich-bitch">
               RICH BITCH
             </a>
           </p>
@@ -43,22 +47,22 @@ export default function Submenu() {
         <div></div>
       </div>
       <div className="submenu-item">
-        <a href="">
+        <a href="https://freckbeauty.com/about">
         ABOUT
         </a>
       </div>
       <div className="submenu-item">
-        <a href="">
+        <a href="https://freckbeauty.com/blog">
           OOZE
         </a>
       </div>
       <div className="submenu-item">
-        <a href="">
+        <a href="https://freckbeauty.com/contact">
           CONTACT
         </a>
       </div>
       <div className="submenu-item">
-        <a href="">
+        <a href="https://freckbeauty.com/my-account">
           ACCOUNT
         </a>
       </div>

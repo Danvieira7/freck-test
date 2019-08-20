@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Favicon from './Favicon';
@@ -45,31 +45,31 @@ class MainHeader extends Component {
         </Head>
         <MobileHeader />
         <div id="main-header">
-          <Link href="/">
-            <a>
-              <img className="logo" src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" alt="Freck logo"/>
-            </a>
-          </Link>
+          <a href="https://freckbeauty.com">
+            <img className="logo" src="https://freckbeauty.com/wp-content/uploads/2019/05/Freck-logo.png" alt="Freck logo"/>
+          </a>
           <div>
             <div className="nav">
+              <a href="https://freckbeauty.com">
+                Home
+              </a>
               <Link href="/">
-                <a>Home</a>
+                <a>
+                  Shop Freck
+                </a>
               </Link>
-              <Link href="shop-freck">
-                <a>Shop Freck</a>
-              </Link>
-              <Link href="blog">
-                <a>Blog</a>
-              </Link>
-              <Link href="about">
-                <a>About</a>
-              </Link>
-              <Link href="contact">
-                <a>Contact</a>
-              </Link>
-              <Link href="my-account">
-                <a>Log In</a>
-              </Link>
+              <a href="https://freckbeauty.com/blog">
+                Blog
+              </a>
+              <a href="https://freckbeauty.com/about">
+                About
+              </a>
+              <a href="https://freckbeauty.com/contact">
+                Contact
+              </a>
+              <a href="https://freckbeauty.com/my-account">
+                Log In
+              </a>
               <CartIcon />
             </div>
           </div>
