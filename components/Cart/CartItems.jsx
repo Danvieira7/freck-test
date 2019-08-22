@@ -48,7 +48,7 @@ export default class CartItems extends Component {
             color: black;
             width: 25px;
             height: 19px;
-            border: gray 2px solid;
+            border: #BAB9B3 2px solid;
             text-align: center;
             margin-top: -35px;
           }
@@ -56,15 +56,16 @@ export default class CartItems extends Component {
             margin-top: -35px;
             width: 25px;
             height: 19px;
-            background-color: gray;
+            background-color: #BAB9B3;
             color: white;
-            border: gray 2px solid;
+            border: #BAB9B3 2px solid;
             font-size: 13px;
           }
           .far {
             margin-left: -47px;
             margin-top: -15px;
             font-size: 15px;
+            color: #BAB9B3;
           }
           .imgComp {
             display: flex;
