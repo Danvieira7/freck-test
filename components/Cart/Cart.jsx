@@ -12,7 +12,7 @@ export default class Cart extends Component {
     this.props.toggleCart();
 	}
   
-  render() {
+  render(props) {
     let cartTotal = total();
     let cartItems = list();
     return (
@@ -23,6 +23,7 @@ export default class Cart extends Component {
             cartItems.map(
               item =>
               <CartItems
+                {...props}
                 item={item}
                 key={item.id}
               />
@@ -30,9 +31,10 @@ export default class Cart extends Component {
           ) : ''}
           <br/><br/>
           Total: ${cartTotal}
-          <br/><br/><br/><br/>
-          <button onClick={destroy}>CLEAR CART</button>
-          <button onClick={this.handleClick}>CLOSE CART</button>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
         </div>
         <style jsx>{`
           #modal {

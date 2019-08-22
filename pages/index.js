@@ -24,7 +24,9 @@ export default class Index extends Component {
         Authorization: 'Basic Y2tfMWE0ODFkYTMzNTkxMWZkY2E3MWMzMjM4YTQ4NjJhZGZiZjgyNDE2YTpjc183M2QwMjhmMzAwZDIzMmU5YjQzMzhmOTc3YmM5ZmU3YmFmNjNjMzkx'
       }
     });
+
     const data = await res.json();
+    
     return {
       products: data
     }
@@ -33,8 +35,10 @@ export default class Index extends Component {
   handleAddToCart() {
     add({
 			id: this.product.id,
-			name: this.product.name,
-			price: this.product.price
+      name: this.product.name,
+      short_description: this.product.short_description,
+      price: this.product.price,
+      image: this.product.images[0].src
     });
     console.log(list());
   }
