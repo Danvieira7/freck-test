@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { list, total, destroy } from 'cart-localstorage'
+import FreeShippingBar from './FreeShippingBar';
 import CartItems from './CartItems';
 
 export default class Cart extends Component {
@@ -17,8 +18,7 @@ export default class Cart extends Component {
     return (
       <div id="modal">
         <div id="cart">
-        <button onClick={destroy}>CLEAR CART</button>
-        <button onClick={this.handleClick}>CLOSE CART</button>
+          <FreeShippingBar/>
           {cartItems.length ? (
             cartItems.map(
               item =>
