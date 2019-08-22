@@ -8,10 +8,9 @@ export default class MobileHeader extends Component {
     this.state = {
       transform: false
     };
-    this.toggleClass = this.toggleClass.bind(this);
   }
 
-  toggleClass() {
+  toggleClass = () => {
     this.setState({transform: !this.state.transform});
   }
 

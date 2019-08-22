@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 
-class ProductList extends Component {
+export default class ProductList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			hover: false,
+			hover: false
 		}
-		this.toggleHover = this.toggleHover.bind(this);
 	}
 
-	toggleHover() {
+	toggleHover = () => {
 		this.setState({hover: !this.state.hover})
 	}
+
+	handleClick = () => {
+		this.props.handleAddToCart();
+		this.props.toggleCart();
+	}
+
 	render() {
-		const {product} = this.props;
+		const { product } = this.props;
 		const rawJson = product.short_description;
 		const productDescription = rawJson.replace(/(<([^>]+)>)/ig,"");
 		const toggleImg = {
@@ -45,11 +50,13 @@ class ProductList extends Component {
 							<h3>{product.name}</h3>
 							<h5 className="product-description">{productDescription}</h5>
 					</a>
-					<a href={`https://freckbeauty.com/cart/?add-to-cart=${product.id}&quantity=1`}>
-						<button>
+					{/* <a href={`https://freckbeauty.com/cart/?add-to-cart=${evt}&quantity=1`}> */}
+						<button
+							onClick={this.handleClick}
+						>
 							${product.price} — ADD
 						</button>
-					</a>
+					{/* </a> */}
 				</div>
 				<style jsx>{`
 					.product-container {
@@ -136,5 +143,3 @@ class ProductList extends Component {
 		);
 	}
 }
-
-export default ProductList;

@@ -12,10 +12,9 @@ class MainHeader extends Component {
     this.state = {
       transform: false
     };
-    this.toggleClass = this.toggleClass.bind(this);
   }
 
-  toggleClass() {
+  toggle = () => {
     this.setState({transform: !this.state.transform});
   }
 
@@ -32,9 +31,6 @@ class MainHeader extends Component {
     }
     const bar3 = {
       transform: this.state.transform ? 'rotate(45deg) translate(-8px, -8px)' : null
-    }
-    const toggle = {
-      display: this.state.transform ? 'block' : 'none'
     }
     return (
       <div>
@@ -73,12 +69,12 @@ class MainHeader extends Component {
               <CartIcon />
             </div>
           </div>
-          <div className="hamburger" style ={fixedHamburger} onClick={this.toggleClass}>
+          <div className="hamburger" style ={fixedHamburger} onClick={this.toggle}>
             <div className="bar1" style={bar1}></div>
             <div className="bar2" style={bar2}></div>
             <div className="bar3" style={bar3}></div>
           </div>
-          {this.state.transform ? <Submenu style={toggle} /> : null}
+          {this.state.transform ? <Submenu /> : null}
         </div>
         <style jsx global>{`
           * { 

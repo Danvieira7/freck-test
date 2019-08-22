@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
   
-export default class Submenu extends Component {
+export default class MobileSubmenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
       transform: false
     };
-    this.toggleClass = this.toggleClass.bind(this);
   }
 
-  toggleClass() {
+  toggleClass = () => {
     this.setState({transform: !this.state.transform});
   }
 

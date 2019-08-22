@@ -1,25 +1,49 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import fetch from 'isomorphic-unfetch';
+import { add, list } from 'cart-localstorage';
 import MainHeader from '../components/Header/MainHeader';
 import MobileFooter from '../components/Footer/MobileFooter';
-import fetch from 'isomorphic-unfetch';
 import MobileHero from '../components/Shop/MobileHero';
 import ProductList from '../components/Shop/ProductList';
+import Cart from '../components/Cart/Cart';
 
-class Index extends Component {
+export default class Index extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      show: false
+    };
   }
 
   static async getInitialProps() {
-    const res = await fetch(`https://my-json-server.typicode.com/freckbeauty/dummy-data/products`);
+    const res = await fetch(`https://my-json-server.typicode.com/freckbeauty/dummy-data/products`, {
+      mode: 'cors',
+      'cache-control': 'no-cache',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Basic Y2tfMWE0ODFkYTMzNTkxMWZkY2E3MWMzMjM4YTQ4NjJhZGZiZjgyNDE2YTpjc183M2QwMjhmMzAwZDIzMmU5YjQzMzhmOTc3YmM5ZmU3YmFmNjNjMzkx'
+      }
+    });
     const data = await res.json();
     return {
       products: data
     }
   }
+
+  handleAddToCart() {
+    add({
+			id: this.product.id,
+			name: this.product.name,
+			price: this.product.price
+    });
+    console.log(list());
+  }
+
+  toggleCart = () => {
+    this.setState({show: !this.state.show});
+  }
     
-  render() {
+  render(props) {
     const { products } = this.props;
     return (
       <div>
@@ -32,13 +56,21 @@ class Index extends Component {
           </div>
         </div>
         <MobileHero />
+        {this.state.show ?
+          <Cart
+            toggleCart={this.toggleCart}
+          /> 
+          : null}
         <div className="product-container">
           {products.length ? (
             products.map(
               product =>
               <ProductList
+                {...props}
                 product={product}
                 key={product.id}
+                handleAddToCart={this.handleAddToCart}
+                toggleCart={this.toggleCart}
               />
             )
           ) : ''}
@@ -114,5 +146,3 @@ class Index extends Component {
     );
   };
 }
-
-export default Index;
