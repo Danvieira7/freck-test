@@ -117,7 +117,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var cart_localstorage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! cart-localstorage */ "cart-localstorage");
 /* harmony import */ var cart_localstorage__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(cart_localstorage__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _CartItems__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CartItems */ "./components/Cart/CartItems.jsx");
+/* harmony import */ var _FreeShippingBar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FreeShippingBar */ "./components/Cart/FreeShippingBar.jsx");
+/* harmony import */ var _CartItems__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./CartItems */ "./components/Cart/CartItems.jsx");
+
 
 
 
@@ -161,14 +163,8 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         id: "cart",
         className: "jsx-1465398706"
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
-        onClick: cart_localstorage__WEBPACK_IMPORTED_MODULE_10__["destroy"],
-        className: "jsx-1465398706"
-      }, "CLEAR CART"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
-        onClick: this.handleClick,
-        className: "jsx-1465398706"
-      }, "CLOSE CART"), cartItems.length ? cartItems.map(function (item) {
-        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_CartItems__WEBPACK_IMPORTED_MODULE_11__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_FreeShippingBar__WEBPACK_IMPORTED_MODULE_11__["default"], null), cartItems.length ? cartItems.map(function (item) {
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_CartItems__WEBPACK_IMPORTED_MODULE_12__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
           item: item,
           key: item.id
         }));
@@ -186,7 +182,7 @@ function (_Component) {
         className: "jsx-1465398706"
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_8___default.a, {
         id: "1465398706"
-      }, "#modal.jsx-1465398706{height:100vh;width:100vw;position:fixed;z-index:1;top:0;left:0;}#cart.jsx-1465398706{background-color:white;text-align:center;height:100%;width:100%;padding-top:10%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mcmVja2Rldi9GcmVjay9kZXBsb3ktdGVzdC9mcmVjay10ZXN0L2NvbXBvbmVudHMvQ2FydC9DYXJ0LmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFzQ29CLEFBRzBCLEFBUVUsYUFQWCxVQVFNLEVBUEgsZUFDTCxDQU9FLFNBTk4sR0FPSyxHQU5KLE9BQ1QsQ0FNa0IsZ0JBQ2xCIiwiZmlsZSI6Ii9Vc2Vycy9mcmVja2Rldi9GcmVjay9kZXBsb3ktdGVzdC9mcmVjay10ZXN0L2NvbXBvbmVudHMvQ2FydC9DYXJ0LmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBsaXN0LCB0b3RhbCwgZGVzdHJveSB9IGZyb20gJ2NhcnQtbG9jYWxzdG9yYWdlJ1xuaW1wb3J0IENhcnRJdGVtcyBmcm9tICcuL0NhcnRJdGVtcyc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIENhcnQgZXh0ZW5kcyBDb21wb25lbnQge1xuICBjb25zdHJ1Y3Rvcihwcm9wcykge1xuICAgIHN1cGVyKHByb3BzKTtcbiAgfVxuXG4gIGhhbmRsZUNsaWNrID0gKCkgPT4ge1xuICAgIHRoaXMucHJvcHMudG9nZ2xlQ2FydCgpO1xuXHR9XG4gIFxuICByZW5kZXIocHJvcHMpIHtcbiAgICBsZXQgY2FydFRvdGFsID0gdG90YWwoKTtcbiAgICBsZXQgY2FydEl0ZW1zID0gbGlzdCgpO1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGlkPVwibW9kYWxcIj5cbiAgICAgICAgPGRpdiBpZD1cImNhcnRcIj5cbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXtkZXN0cm95fT5DTEVBUiBDQVJUPC9idXR0b24+XG4gICAgICAgIDxidXR0b24gb25DbGljaz17dGhpcy5oYW5kbGVDbGlja30+Q0xPU0UgQ0FSVDwvYnV0dG9uPlxuICAgICAgICAgIHtjYXJ0SXRlbXMubGVuZ3RoID8gKFxuICAgICAgICAgICAgY2FydEl0ZW1zLm1hcChcbiAgICAgICAgICAgICAgaXRlbSA9PlxuICAgICAgICAgICAgICA8Q2FydEl0ZW1zXG4gICAgICAgICAgICAgICAgey4uLnByb3BzfVxuICAgICAgICAgICAgICAgIGl0ZW09e2l0ZW19XG4gICAgICAgICAgICAgICAga2V5PXtpdGVtLmlkfVxuICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgKVxuICAgICAgICAgICkgOiAnJ31cbiAgICAgICAgICA8YnIvPjxici8+XG4gICAgICAgICAgVG90YWw6ICR7Y2FydFRvdGFsfVxuICAgICAgICAgIDxici8+XG4gICAgICAgICAgPGJyLz5cbiAgICAgICAgICA8YnIvPlxuICAgICAgICAgIDxici8+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgI21vZGFsIHtcbiAgICAgICAgICAgIGhlaWdodDogMTAwdmg7XG4gICAgICAgICAgICB3aWR0aDogMTAwdnc7XG4gICAgICAgICAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgICAgICAgICB6LWluZGV4OiAxO1xuICAgICAgICAgICAgdG9wOiAwO1xuICAgICAgICAgICAgbGVmdDogMDtcbiAgICAgICAgICB9XG4gICAgICAgICAgI2NhcnQge1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIHBhZGRpbmctdG9wOiAxMCU7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG59Il19 */\n/*@ sourceURL=/Users/freckdev/Freck/deploy-test/freck-test/components/Cart/Cart.jsx */"));
+      }, "#modal.jsx-1465398706{height:100vh;width:100vw;position:fixed;z-index:1;top:0;left:0;}#cart.jsx-1465398706{background-color:white;text-align:center;height:100%;width:100%;padding-top:10%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mcmVja2Rldi9GcmVjay9kZXBsb3ktdGVzdC9mcmVjay10ZXN0L2NvbXBvbmVudHMvQ2FydC9DYXJ0LmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFzQ29CLEFBRzBCLEFBUVUsYUFQWCxVQVFNLEVBUEgsZUFDTCxDQU9FLFNBTk4sR0FPSyxHQU5KLE9BQ1QsQ0FNa0IsZ0JBQ2xCIiwiZmlsZSI6Ii9Vc2Vycy9mcmVja2Rldi9GcmVjay9kZXBsb3ktdGVzdC9mcmVjay10ZXN0L2NvbXBvbmVudHMvQ2FydC9DYXJ0LmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBsaXN0LCB0b3RhbCwgZGVzdHJveSB9IGZyb20gJ2NhcnQtbG9jYWxzdG9yYWdlJ1xuaW1wb3J0IEZyZWVTaGlwcGluZ0JhciBmcm9tICcuL0ZyZWVTaGlwcGluZ0Jhcic7XG5pbXBvcnQgQ2FydEl0ZW1zIGZyb20gJy4vQ2FydEl0ZW1zJztcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgQ2FydCBleHRlbmRzIENvbXBvbmVudCB7XG4gIGNvbnN0cnVjdG9yKHByb3BzKSB7XG4gICAgc3VwZXIocHJvcHMpO1xuICB9XG5cbiAgaGFuZGxlQ2xpY2sgPSAoKSA9PiB7XG4gICAgdGhpcy5wcm9wcy50b2dnbGVDYXJ0KCk7XG5cdH1cbiAgXG4gIHJlbmRlcihwcm9wcykge1xuICAgIGxldCBjYXJ0VG90YWwgPSB0b3RhbCgpO1xuICAgIGxldCBjYXJ0SXRlbXMgPSBsaXN0KCk7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgaWQ9XCJtb2RhbFwiPlxuICAgICAgICA8ZGl2IGlkPVwiY2FydFwiPlxuICAgICAgICAgIDxGcmVlU2hpcHBpbmdCYXIvPlxuICAgICAgICAgIHtjYXJ0SXRlbXMubGVuZ3RoID8gKFxuICAgICAgICAgICAgY2FydEl0ZW1zLm1hcChcbiAgICAgICAgICAgICAgaXRlbSA9PlxuICAgICAgICAgICAgICA8Q2FydEl0ZW1zXG4gICAgICAgICAgICAgICAgey4uLnByb3BzfVxuICAgICAgICAgICAgICAgIGl0ZW09e2l0ZW19XG4gICAgICAgICAgICAgICAga2V5PXtpdGVtLmlkfVxuICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgKVxuICAgICAgICAgICkgOiAnJ31cbiAgICAgICAgICA8YnIvPjxici8+XG4gICAgICAgICAgVG90YWw6ICR7Y2FydFRvdGFsfVxuICAgICAgICAgIDxici8+XG4gICAgICAgICAgPGJyLz5cbiAgICAgICAgICA8YnIvPlxuICAgICAgICAgIDxici8+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgI21vZGFsIHtcbiAgICAgICAgICAgIGhlaWdodDogMTAwdmg7XG4gICAgICAgICAgICB3aWR0aDogMTAwdnc7XG4gICAgICAgICAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgICAgICAgICB6LWluZGV4OiAxO1xuICAgICAgICAgICAgdG9wOiAwO1xuICAgICAgICAgICAgbGVmdDogMDtcbiAgICAgICAgICB9XG4gICAgICAgICAgI2NhcnQge1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIHBhZGRpbmctdG9wOiAxMCU7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG59Il19 */\n/*@ sourceURL=/Users/freckdev/Freck/deploy-test/freck-test/components/Cart/Cart.jsx */"));
     }
   }]);
 
@@ -277,6 +273,80 @@ function (_Component) {
 
   return CartItems;
 }(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./components/Cart/FreeShippingBar.jsx":
+/*!*********************************************!*\
+  !*** ./components/Cart/FreeShippingBar.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FreeShippingBar; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var cart_localstorage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! cart-localstorage */ "cart-localstorage");
+/* harmony import */ var cart_localstorage__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(cart_localstorage__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+
+var FreeShippingBar =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(FreeShippingBar, _Component);
+
+  function FreeShippingBar(props) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FreeShippingBar);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(FreeShippingBar).call(this, props));
+    _this.state = {
+      qualifies: false
+    };
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(FreeShippingBar, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var spend = Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_6__["total"])();
+
+      if (spend >= 75) {
+        this.setState(function (prevState, props) {
+          return {
+            qualifies: !prevState.qualifies
+          };
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var spend = Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_6__["total"])();
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "You're on your way to free shipping!"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "This is the Free Shipping Bar div."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+        id: "spend"
+      }, "$", spend), " of $75", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null));
+    }
+  }]);
+
+  return FreeShippingBar;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 
 
