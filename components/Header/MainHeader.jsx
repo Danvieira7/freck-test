@@ -15,7 +15,9 @@ class MainHeader extends Component {
   }
 
   toggle = () => {
-    this.setState({transform: !this.state.transform});
+    this.setState(function(prevState) {
+      return {transform: !prevState.transform}
+    });
   }
 
   render() {

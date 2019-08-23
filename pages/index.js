@@ -44,7 +44,9 @@ export default class Index extends Component {
   }
 
   toggleCart = () => {
-    this.setState({show: !this.state.show});
+    this.setState(function(prevState) {
+      return {show: !prevState.show}
+    });
   }
     
   render(props) {

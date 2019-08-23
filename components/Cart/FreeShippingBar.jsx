@@ -12,7 +12,7 @@ export default class FreeShippingBar extends Component {
   componentDidMount() {
     let spend = total();
     if (spend >= 75) {
-      this.setState(function(prevState, props) {
+      this.setState(function(prevState) {
         return {qualifies: !prevState.qualifies}
       })
     } else {
@@ -28,7 +28,7 @@ export default class FreeShippingBar extends Component {
     return (
       <>
         <p>You're on your way to free shipping!</p>
-        <div>
+        <div id="bar">
           This is the Free Shipping Bar div.
         </div>
         <br/>
@@ -36,6 +36,11 @@ export default class FreeShippingBar extends Component {
         {this.state.qualifies ? '$75' : '$' + this.handleTotal()}
         </span> of $75
         <br/><br/>
+        <style jsx>{`
+          #bar {
+            
+          }
+        `}</style>
       </>
     );
   }

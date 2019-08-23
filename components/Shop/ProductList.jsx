@@ -9,7 +9,9 @@ export default class ProductList extends Component {
 	}
 
 	toggleHover = () => {
-		this.setState({hover: !this.state.hover})
+		this.setState(function(prevState) {
+			return {hover: !prevState.hover}
+		})
 	}
 
 	handleClick = () => {
