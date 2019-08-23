@@ -10,12 +10,6 @@ export default class CartItems extends Component {
     this.props.deleteItem();
   }
 
-  handleClick(idx) {
-    let items = list();
-    let item = items[idx]
-    console.log(item[idx]);
-  }
-
   render() {
     let { item } = this.props;
     return (
