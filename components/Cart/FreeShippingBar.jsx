@@ -18,6 +18,10 @@ export default class FreeShippingBar extends Component {
     }
   }
 
+  handleSeventyFive() {
+    return 75;
+  }
+
   render() {
     let spend = total();
     return (
@@ -28,7 +32,9 @@ export default class FreeShippingBar extends Component {
         </div>
         <br/>
         <span id="spend">
-          ${spend}
+        ${this.state.qualifies ?
+        this.handleSeventyFive()
+        : '$' + {spend}}
         </span> of $75
         <br/><br/>
       </>
