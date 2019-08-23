@@ -15,15 +15,16 @@ export default class FreeShippingBar extends Component {
       this.setState(function(prevState, props) {
         return {qualifies: !prevState.qualifies}
       })
+    } else {
+      return spend;
     }
   }
 
-  handleSeventyFive() {
-    return 75;
+  handleTotal() {
+    return total();
   }
 
   render() {
-    let spend = total();
     return (
       <>
         <p>You're on your way to free shipping!</p>
@@ -32,9 +33,7 @@ export default class FreeShippingBar extends Component {
         </div>
         <br/>
         <span id="spend">
-        ${this.state.qualifies ?
-        this.handleSeventyFive()
-        : '$' + {spend}}
+        {this.state.qualifies ? '$75' : '$' + this.handleTotal()}
         </span> of $75
         <br/><br/>
       </>

@@ -148,22 +148,21 @@ function (_Component) {
             qualifies: !prevState.qualifies
           };
         });
+      } else {
+        return spend;
       }
     }
   }, {
-    key: "handleSeventyFive",
-    value: function handleSeventyFive() {
-      return 75;
+    key: "handleTotal",
+    value: function handleTotal() {
+      return Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_6__["total"])();
     }
   }, {
     key: "render",
     value: function render() {
-      var spend = Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_6__["total"])();
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "You're on your way to free shipping!"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "This is the Free Shipping Bar div."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
         id: "spend"
-      }, "$", this.state.qualifies ? this.handleSeventyFive() : '$' + {
-        spend: spend
-      }), " of $75", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null));
+      }, this.state.qualifies ? '$75' : '$' + this.handleTotal()), " of $75", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null));
     }
   }]);
 
