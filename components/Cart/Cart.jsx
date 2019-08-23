@@ -18,6 +18,9 @@ export default class Cart extends Component {
     return (
       <div id="modal">
         <div id="cart">
+          {/* DO NOT DELETE THE NEXT TWO LINES! For dev purposes only. */}
+          <button onClick={destroy}>destroy</button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <button onClick={this.handleClick}>close</button>
           <FreeShippingBar/>
           {cartItems.length ? (
             cartItems.map(
