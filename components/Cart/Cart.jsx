@@ -33,7 +33,7 @@ export default class Cart extends Component {
             )
           ) : ''}
           <br/><br/>
-          Total: ${cartTotal}
+          Subtotal: ${cartTotal}
           <br/>
           <br/>
           <br/>
@@ -41,19 +41,21 @@ export default class Cart extends Component {
         </div>
         <style jsx>{`
           #modal {
-            height: 100vh;
-            width: 100vw;
+            height: 100%;
+            width: 100%;
             position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
+            overflow: auto;
+            background-color: rgb(244, 245, 243);
           }
           #cart {
-            background-color: white;
+            background-color: rgb(244, 245, 243);
             text-align: center;
             height: 100%;
             width: 100%;
-            padding-top: 10%;
+            padding-top: 5%;
           }
         `}</style>
       </div>
