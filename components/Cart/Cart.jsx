@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { list, total, destroy } from 'cart-localstorage'
+import { list, remove, total, destroy } from 'cart-localstorage'
 import FreeShippingBar from './FreeShippingBar';
 import CartItems from './CartItems';
 
@@ -10,7 +10,12 @@ export default class Cart extends Component {
 
   handleClick = () => {
     this.props.toggleCart();
-	}
+  }
+  
+  deleteItem() {
+    let item = this.item.id;
+    remove(item);
+  }
   
   render(props) {
     let cartTotal = total();
@@ -29,6 +34,7 @@ export default class Cart extends Component {
                 {...props}
                 item={item}
                 key={item.id}
+                deleteItem={this.deleteItem}
               />
             )
           ) : ''}
