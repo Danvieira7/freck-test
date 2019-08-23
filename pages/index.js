@@ -24,14 +24,12 @@ export default class Index extends Component {
         Authorization: 'Basic Y2tfMWE0ODFkYTMzNTkxMWZkY2E3MWMzMjM4YTQ4NjJhZGZiZjgyNDE2YTpjc183M2QwMjhmMzAwZDIzMmU5YjQzMzhmOTc3YmM5ZmU3YmFmNjNjMzkx'
       }
     });
-
     const data = await res.json();
-    
     return {
       products: data
     }
   }
-
+  
   handleAddToCart() {
     add({
 			id: this.product.id,
@@ -40,7 +38,6 @@ export default class Index extends Component {
       price: this.product.price,
       image: this.product.images[0].src
     });
-    console.log(list());
   }
 
   toggleCart = () => {
@@ -48,7 +45,7 @@ export default class Index extends Component {
       return {show: !prevState.show}
     });
   }
-    
+
   render(props) {
     const { products } = this.props;
     return (
@@ -64,6 +61,7 @@ export default class Index extends Component {
         <MobileHero />
         {this.state.show ?
           <Cart
+            deleteItem={this.deleteItem}
             toggleCart={this.toggleCart}
           /> 
           : null}

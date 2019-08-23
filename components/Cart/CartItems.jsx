@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { list } from 'cart-localstorage';
 
 export default class CartItems extends Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount(){
-    console.log(this.props);
+  handleDelete = () => {
+    this.props.deleteItem();
   }
 
   render() {
@@ -14,7 +15,10 @@ export default class CartItems extends Component {
     return (
       <div className="item">
         <div className="imgComp">
-          <i className="far fa-times-circle"></i>
+          <i
+            className="far fa-times-circle"
+            onClick={this.handleDelete}
+          ></i>
           <img className="img" src={item.image}></img>
         </div>
         <div className="descComp">
