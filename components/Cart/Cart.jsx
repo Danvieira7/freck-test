@@ -6,6 +6,10 @@ import CartItems from './CartItems';
 export default class Cart extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      list: list(),
+      subtotal: total()
+    }
   }
 
   handleClick = () => {
@@ -18,8 +22,8 @@ export default class Cart extends Component {
   }
   
   render(props) {
-    let cartTotal = total();
-    let cartItems = list();
+    let cartItems = this.state.list;
+    let subtotal = this.state.subtotal;
     return (
       <div id="modal">
         <div id="cart">
@@ -39,7 +43,7 @@ export default class Cart extends Component {
             )
           ) : ''}
           <br/><br/>
-          Subtotal: ${cartTotal}
+          Subtotal: ${subtotal}
           <br/>
           <br/>
           <br/>
@@ -62,6 +66,7 @@ export default class Cart extends Component {
             height: 100%;
             width: 100%;
             padding-top: 5%;
+            border: 15px solid #e5d9c9;
           }
         `}</style>
       </div>

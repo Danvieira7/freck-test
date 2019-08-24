@@ -1,24 +1,39 @@
 import React, { Component } from 'react';
-import { list } from 'cart-localstorage';
+import { total } from 'cart-localstorage';
 
 export default class CartItems extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      deleted: false
+    }
+  }
+  
+  componentDidUpdate() {
+    console.log('did update: ' + total());
   }
 
   handleDelete = () => {
     this.props.deleteItem();
+    this.setState(function(prevState) {
+      return {deleted: !prevState.deleted}
+    })
   }
 
   render() {
     let { item } = this.props;
+    const style = {display: this.state.deleted ? 'none' : 'flex' };
     return (
-      <div className="item">
+      <div
+        className="item"
+        style={style}
+      >
         <div className="imgComp">
           <i
             className="far fa-times-circle"
             onClick={this.handleDelete}
-          ></i>
+          >
+          </i>
           <img className="img" src={item.image}></img>
         </div>
         <div className="descComp">
@@ -28,7 +43,10 @@ export default class CartItems extends Component {
         </div>
         <div className="qtyComp">
           <button>-</button>
-          <input type="text" placeholder={item.quantity}/>
+          {/* <textarea className="input" contenteditable="true">
+            
+          </textarea> */}
+          <input type="text" min="1" placeholder={item.quantity} />
           <button>+</button> 
         </div>
         <style jsx>{`
@@ -48,13 +66,19 @@ export default class CartItems extends Component {
             font-size: 12px;
             font-style: italic;
           }
-          input{
+          input {
             color: black;
             width: 25px;
             height: 19px;
             border: #BAB9B3 2px solid;
             text-align: center;
             margin-top: -35px;
+          }
+          input:focus{
+            outline: none;
+          }
+          ::placeholder {
+            color: #000;
           }
           button {
             margin-top: -35px;
@@ -64,6 +88,9 @@ export default class CartItems extends Component {
             color: white;
             border: #BAB9B3 2px solid;
             font-size: 13px;
+          }
+          button:focus {
+            outline: none;
           }
           .far {
             margin-left: -47px;
