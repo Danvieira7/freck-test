@@ -11,6 +11,7 @@ export default class FreeShippingBar extends Component {
 
   componentDidMount() {
     let spend = total();
+    console.log('did mount: '+ spend);
     if (spend >= 75) {
       this.setState(function(prevState) {
         return {qualifies: !prevState.qualifies}
@@ -19,7 +20,7 @@ export default class FreeShippingBar extends Component {
       return spend;
     }
   }
-
+  
   handleTotal() {
     return total();
   }
