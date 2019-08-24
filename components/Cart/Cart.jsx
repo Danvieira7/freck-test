@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { list, remove, total, destroy } from 'cart-localstorage'
+import { list, remove, total, destroy } from 'cart-localstorage';
 import FreeShippingBar from './FreeShippingBar';
 import CartItems from './CartItems';
 
@@ -59,6 +59,7 @@ export default class Cart extends Component {
             left: 0;
             overflow: auto;
             background-color: rgb(244, 245, 243);
+            border: 15px solid #e5d9c9;
           }
           #cart {
             background-color: rgb(244, 245, 243);
@@ -66,7 +67,6 @@ export default class Cart extends Component {
             height: 100%;
             width: 100%;
             padding-top: 5%;
-            border: 15px solid #e5d9c9;
           }
         `}</style>
       </div>

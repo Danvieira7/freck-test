@@ -27,7 +27,7 @@ export default class FreeShippingBar extends Component {
 
   render() {
     return (
-      <>
+      <div id="container">
         <p>You're on your way to free shipping!</p>
         <div id="bar">
           This is the Free Shipping Bar div.
@@ -38,11 +38,11 @@ export default class FreeShippingBar extends Component {
         </span> of $75
         <br/><br/>
         <style jsx>{`
-          #bar {
-            
+          #container {
+            padding-top: 5%;
           }
         `}</style>
-      </>
+      </div>
     );
   }
 }

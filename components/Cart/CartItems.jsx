@@ -24,31 +24,31 @@ export default class CartItems extends Component {
     let { item } = this.props;
     const style = {display: this.state.deleted ? 'none' : 'flex' };
     return (
-      <div
-        className="item"
-        style={style}
-      >
-        <div className="imgComp">
-          <i
-            className="far fa-times-circle"
-            onClick={this.handleDelete}
-          >
-          </i>
-          <img className="img" src={item.image}></img>
-        </div>
-        <div className="descComp">
-          <p className="name"> {item.name} </p>
-          <p className="short"> {item.short_description} </p>
-          <p className="price"> ${item.price} </p>
-        </div>
-        <div className="qtyComp">
-          <button>-</button>
-          {/* <textarea className="input" contenteditable="true">
-            
-          </textarea> */}
-          <input type="text" min="1" placeholder={item.quantity} />
-          <button>+</button> 
-        </div>
+        <div
+          className="item"
+          style={style}
+        >
+          <div className="imgComp">
+            <i
+              className="far fa-times-circle"
+              onClick={this.handleDelete}
+            >
+            </i>
+            <img className="img" src={item.image}></img>
+          </div>
+          <div className="descComp">
+            <p className="name"> {item.name} </p>
+            <p className="short"> {item.short_description} </p>
+            <p className="price"> ${item.price} </p>
+          </div>
+          <div className="qtyComp">
+            <button>-</button>
+            {/* <textarea className="input" contenteditable="true">
+              
+            </textarea> */}
+            <input type="text" min="1" placeholder={item.quantity} />
+            <button>+</button> 
+          </div>
         <style jsx>{`
           .item {
             background-color: rgb(244, 245, 243);
