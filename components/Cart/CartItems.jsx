@@ -25,7 +25,7 @@ export default class CartItems extends Component {
 
   handleDecrement = () => {
     let quantity = this.props.item.quantity;
-    if (quantity === 0 ) {
+    if ((quantity - 1) === 0 ) {
       this.setState(function(prevState) {
         return {
           deleted: !prevState.deleted,
