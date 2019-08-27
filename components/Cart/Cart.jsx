@@ -8,8 +8,12 @@ export default class Cart extends Component {
     super(props);
     this.state = {
       list: list(),
-      subtotal: total()
+      subtotal: null
     }
+  }
+
+  componentDidMount(){
+    console.log("Subtotal", this.state.subtotal)
   }
 
   handleClick = () => {
@@ -19,26 +23,26 @@ export default class Cart extends Component {
   deleteItem() {
     let item = this.item.id;
     remove(item);
-    // console.log(this.item.price * this.item.quantity)
     return total(this.subtotal, this.item.price);
   }
-
+  
   decrementItem() {
     let item = this.item.id;
     update(item, 'quantity', get(item).quantity - 1);
   }
-
+  
   incrementItem() {
     let item = this.item.id;
     update(item, 'quantity', get(item).quantity + 1);
   }
-  handleSubTotal = (price) => {
-    let montante = total() + price;
+
+  handleSubTotal = () => {
     this.setState({
-      subtotal: montante
+      subtotal: total()
     }) 
-    console.log(this.state.subtotal)
+    console.log("total", total())
   }
+
   render() {
     let cartItems = this.state.list;
     let subtotal = total();

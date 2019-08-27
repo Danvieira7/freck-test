@@ -35,7 +35,6 @@ export default class CartItems extends Component {
       this.props.item.quantity-- - 1;
     }
     this.props.handleSubTotal(this.props.item.price)
-    // this.props.item.price
   }
   
   handleIncrement = () => {
@@ -45,7 +44,6 @@ export default class CartItems extends Component {
       subtotal: total() + this.props.item.price
     })
     this.props.item.quantity++ + 1;
-    // this.handleSubTotal(this.props.item.price)
     this.props.handleSubTotal(this.props.item.price)
   }
   
