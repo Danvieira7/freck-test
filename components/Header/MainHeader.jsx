@@ -15,7 +15,9 @@ class MainHeader extends Component {
   }
 
   toggle = () => {
-    this.setState({transform: !this.state.transform});
+    this.setState(function(prevState) {
+      return {transform: !prevState.transform}
+    });
   }
 
   render() {
@@ -37,6 +39,7 @@ class MainHeader extends Component {
         <Head>
           <title>Freck | The Original Faux Freckles</title>
           <meta name="description" content="change me: description for indexing bots" />
+          <script src="https://kit.fontawesome.com/ab17e105a7.js"></script>
           <Favicon />
         </Head>
         <MobileHeader />

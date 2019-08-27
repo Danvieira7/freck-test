@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { total } from 'cart-localstorage';
 
 export default class ProductList extends Component {
 	constructor(props) {
@@ -9,7 +10,9 @@ export default class ProductList extends Component {
 	}
 
 	toggleHover = () => {
-		this.setState({hover: !this.state.hover})
+		this.setState(function(prevState) {
+			return {hover: !prevState.hover}
+		})
 	}
 
 	handleClick = () => {

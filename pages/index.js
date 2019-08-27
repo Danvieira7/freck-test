@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import fetch from 'isomorphic-unfetch';
-import { add, list } from 'cart-localstorage';
+import { add } from 'cart-localstorage';
 import MainHeader from '../components/Header/MainHeader';
 import MobileFooter from '../components/Footer/MobileFooter';
 import MobileHero from '../components/Shop/MobileHero';
@@ -29,20 +29,23 @@ export default class Index extends Component {
       products: data
     }
   }
-
+  
   handleAddToCart() {
     add({
 			id: this.product.id,
-			name: this.product.name,
-			price: this.product.price
+      name: this.product.name,
+      short_description: this.product.short_description,
+      price: this.product.price,
+      image: this.product.images[0].src
     });
-    console.log(list());
   }
 
   toggleCart = () => {
-    this.setState({show: !this.state.show});
+    this.setState(function(prevState) {
+      return {show: !prevState.show}
+    });
   }
-    
+
   render(props) {
     const { products } = this.props;
     return (
@@ -58,6 +61,7 @@ export default class Index extends Component {
         <MobileHero />
         {this.state.show ?
           <Cart
+            deleteItem={this.deleteItem}
             toggleCart={this.toggleCart}
           /> 
           : null}
@@ -66,7 +70,6 @@ export default class Index extends Component {
             products.map(
               product =>
               <ProductList
-                {...props}
                 product={product}
                 key={product.id}
                 handleAddToCart={this.handleAddToCart}

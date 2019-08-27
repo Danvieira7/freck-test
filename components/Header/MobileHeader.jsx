@@ -11,7 +11,9 @@ export default class MobileHeader extends Component {
   }
 
   toggleClass = () => {
-    this.setState({transform: !this.state.transform});
+    this.setState(function(prevState) {
+      return {transform: !prevState.transform}
+    });
   }
 
   render() {
