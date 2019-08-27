@@ -12,10 +12,6 @@ export default class Cart extends Component {
     }
   }
 
-  componentDidMount() {
-    console.log('yo', this.state.list);
-  }
-
   handleClick = () => {
     this.props.toggleCart();
   }
@@ -29,17 +25,12 @@ export default class Cart extends Component {
 
   decrementItem() {
     let item = this.item.id;
-    let quantity = item.quantity;
     update(item, 'quantity', get(item).quantity - 1);
-    console.log(item);
-    console.log('this is get(item): ', get(item));
   }
 
   incrementItem() {
     let item = this.item.id;
-    let quantity = item.quantity;
     update(item, 'quantity', get(item).quantity + 1);
-    console.log('this is get(item): ', get(item));
   }
 
   render() {
