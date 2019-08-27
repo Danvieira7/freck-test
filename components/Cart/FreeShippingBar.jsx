@@ -10,14 +10,21 @@ export default class FreeShippingBar extends Component {
   }
 
   componentDidMount() {
-    let spend = total();
-    console.log('did mount: '+ spend);
-    if (spend >= 75) {
+    console.log('did mount: '+ total());
+    if (total() >= 75) {
       this.setState(function(prevState) {
         return {qualifies: !prevState.qualifies}
       })
     } else {
-      return spend;
+      return total();
+    }
+  }
+
+  componentDidUpdate() {
+    if (total() < 75) {
+      this.setState(function(prevState) {
+        return {qualifies: !prevState.qualifies}
+      })
     }
   }
   
@@ -28,9 +35,8 @@ export default class FreeShippingBar extends Component {
   render() {
     return (
       <div id="container">
-        <p>You're on your way to free shipping!</p>
+        {this.state.qualifies ? <p>You've unlocked free shipping!</p> : <p>You're on your way to free shipping!</p>}
         <div id="bar">
-          This is the Free Shipping Bar div.
         </div>
         <br/>
         <span id="spend">

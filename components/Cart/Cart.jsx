@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { list, remove, total, destroy } from 'cart-localstorage';
+import { list, total, remove, destroy, update, get } from 'cart-localstorage';
 import FreeShippingBar from './FreeShippingBar';
 import CartItems from './CartItems';
 
@@ -15,30 +15,46 @@ export default class Cart extends Component {
   handleClick = () => {
     this.props.toggleCart();
   }
-  
+
   deleteItem() {
     let item = this.item.id;
     remove(item);
+    // console.log(this.item.price * this.item.quantity)
+    return total(this.subtotal, this.item.price);
   }
-  
-  render(props) {
+
+  decrementItem() {
+    let item = this.item.id;
+    update(item, 'quantity', get(item).quantity - 1);
+  }
+
+  incrementItem() {
+    let item = this.item.id;
+    update(item, 'quantity', get(item).quantity + 1);
+  }
+
+  render() {
     let cartItems = this.state.list;
-    let subtotal = this.state.subtotal;
+    let subtotal = total();
     return (
       <div id="modal">
         <div id="cart">
           {/* DO NOT DELETE THE NEXT TWO LINES! For dev purposes only. */}
           <button onClick={destroy}>destroy</button>&nbsp;&nbsp;&nbsp;&nbsp;
           <button onClick={this.handleClick}>close</button>
-          <FreeShippingBar/>
+          <FreeShippingBar
+            {...this.state}
+          />
           {cartItems.length ? (
             cartItems.map(
               item =>
               <CartItems
-                {...props}
+                {...this.state}
                 item={item}
                 key={item.id}
                 deleteItem={this.deleteItem}
+                decrementItem={this.decrementItem}
+                incrementItem={this.incrementItem}
               />
             )
           ) : ''}
