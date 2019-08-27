@@ -12,6 +12,9 @@ export default class Cart extends Component {
     }
   }
 
+  componentDidMount() {
+  }
+
   handleClick = () => {
     this.props.toggleCart();
   }
@@ -25,7 +28,13 @@ export default class Cart extends Component {
 
   decrementItem() {
     let item = this.item.id;
-    update(item, 'quantity', get(item).quantity - 1);
+    let quantity = item.quantity;
+    if (quantity > 1) {
+      update(item, 'quantity', get(item).quantity - 1);
+    } else {
+      remove(item);
+    }
+    console.log(item);
   }
 
   incrementItem() {
