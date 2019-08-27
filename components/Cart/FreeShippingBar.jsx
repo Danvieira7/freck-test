@@ -19,14 +19,6 @@ export default class FreeShippingBar extends Component {
       return total();
     }
   }
-
-  componentDidUpdate() {
-    if (total() < 75) {
-      this.setState(function(prevState) {
-        return {qualifies: !prevState.qualifies}
-      })
-    }
-  }
   
   handleTotal() {
     return total();
