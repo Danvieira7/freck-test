@@ -33,7 +33,7 @@ export default class CartItems extends Component {
       this.setState({
         list: list()
       })
-      console.log(this.props.item.quantity-- - 1);
+      this.props.item.quantity-- - 1;
     }
   }
 
@@ -42,7 +42,7 @@ export default class CartItems extends Component {
     this.setState({
       list: list()
     })
-    console.log(this.props.item.quantity++ + 1);
+    this.props.item.quantity++ + 1;
   }
 
   render() {
