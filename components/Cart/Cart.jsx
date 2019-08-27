@@ -30,16 +30,19 @@ export default class Cart extends Component {
     let item = this.item.id;
     let quantity = item.quantity;
     if (quantity > 1) {
-      update(item, 'quantity', get(item).quantity - 1);
+      quantity-- - 1;
     } else {
       remove(item);
     }
     console.log(item);
+    console.log(this.item);
   }
 
   incrementItem() {
     let item = this.item.id;
-    update(item, 'quantity', get(item).quantity + 1);
+    let quantity = item.quantity;
+    quantity++ + 1;
+    console.log(this.item);
   }
 
   render() {

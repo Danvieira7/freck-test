@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { get, remove } from 'cart-localstorage';
+import { get } from 'cart-localstorage';
 
 export default class CartItems extends Component {
   constructor(props) {
@@ -25,17 +25,18 @@ export default class CartItems extends Component {
 
   handleDecrement = () => {
     this.props.decrementItem();
+    console.log(this.props.item.quantity-- - 1);
   }
 
   handleIncrement = () => {
     this.props.incrementItem();
-    console.log(get(this.props.item.id).quantity);
+    console.log(this.props.item.quantity++ + 1);
   }
 
   render() {
     let { item } = this.props;
     const style = {display: this.state.deleted ? 'none' : 'flex' };
-    let quantity = get(item.id).quantity;
+    let quantity = item.quantity;
     return (
         <div
           className="item"
@@ -56,13 +57,11 @@ export default class CartItems extends Component {
           </div>
           <div className="qtyComp">
             <button onClick={this.handleDecrement}>-</button>
-            {/* <textarea className="input" contenteditable="true">
-              
-            </textarea> */}
             <div
               id="input"
               type="text"
               min="1"
+              placeholder={quantity}
             >
               {quantity}
             </div>
