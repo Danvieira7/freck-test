@@ -234,12 +234,8 @@ function (_Component) {
         list: Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_9__["list"])(),
         subtotal: Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_9__["total"])() + _this.props.item.price
       });
-<<<<<<< HEAD
 
       _this.props.item.quantity++ + 1;
-=======
-      _this.props.item.quantity++ + 1; // this.handleSubTotal(this.props.item.price)
->>>>>>> master
 
       _this.props.handleSubTotal(_this.props.item.price);
     });
@@ -315,94 +311,38 @@ function (_Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FreeShippingBar; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var cart_localstorage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! cart-localstorage */ "./node_modules/cart-localstorage/index.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var cart_localstorage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cart-localstorage */ "./node_modules/cart-localstorage/index.js");
 
 
 
-
-
-
-
-
-
-var FreeShippingBar =
-/*#__PURE__*/
-function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(FreeShippingBar, _Component);
-
-  function FreeShippingBar(props) {
-    var _this;
-
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FreeShippingBar);
-
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(FreeShippingBar).call(this, props));
-    _this.state = {
-      qualifies: false
-    };
-    return _this;
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(FreeShippingBar, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log('did mount: ' + Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_7__["total"])());
-
-      if (Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_7__["total"])() >= 75) {
-        this.setState(function (prevState) {
-          return {
-            qualifies: !prevState.qualifies
-          };
-        });
-      } else {
-        return Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_7__["total"])();
-      }
-    }
-  }, {
-    key: "handleTotal",
-    value: function handleTotal() {
-      return Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_7__["total"])();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        id: "container",
-        className: "jsx-1815833290"
-      }, this.state.qualifies ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        className: "jsx-1815833290"
-      }, "You've unlocked free shipping!") : react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        className: "jsx-1815833290"
-      }, "You're on your way to free shipping!"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        id: "bar",
-        className: "jsx-1815833290"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
-        className: "jsx-1815833290"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
-        id: "spend",
-        className: "jsx-1815833290"
-      }, this.state.qualifies ? '$75' : '$' + this.handleTotal()), " of $75", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
-        className: "jsx-1815833290"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
-        className: "jsx-1815833290"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_5___default.a, {
-        id: "1815833290"
-      }, "#container.jsx-1815833290{padding-top:5%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9naXNlbGxhZGVtb3JhaXMvY29kZS9mcmVjay10ZXN0L2NvbXBvbmVudHMvQ2FydC9GcmVlU2hpcHBpbmdCYXIuanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXFDb0IsQUFHNEIsZUFDakIiLCJmaWxlIjoiL1VzZXJzL2dpc2VsbGFkZW1vcmFpcy9jb2RlL2ZyZWNrLXRlc3QvY29tcG9uZW50cy9DYXJ0L0ZyZWVTaGlwcGluZ0Jhci5qc3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgQ29tcG9uZW50IH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgdG90YWwgfSBmcm9tICdjYXJ0LWxvY2Fsc3RvcmFnZSc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEZyZWVTaGlwcGluZ0JhciBleHRlbmRzIENvbXBvbmVudCB7XG4gIGNvbnN0cnVjdG9yKHByb3BzKSB7XG4gICAgc3VwZXIocHJvcHMpXG4gICAgdGhpcy5zdGF0ZSA9IHtcbiAgICAgIHF1YWxpZmllczogZmFsc2VcbiAgICB9XG4gIH1cblxuICBjb21wb25lbnREaWRNb3VudCgpIHtcbiAgICBjb25zb2xlLmxvZygnZGlkIG1vdW50OiAnKyB0b3RhbCgpKTtcbiAgICBpZiAodG90YWwoKSA+PSA3NSkge1xuICAgICAgdGhpcy5zZXRTdGF0ZShmdW5jdGlvbihwcmV2U3RhdGUpIHtcbiAgICAgICAgcmV0dXJuIHtxdWFsaWZpZXM6ICFwcmV2U3RhdGUucXVhbGlmaWVzfVxuICAgICAgfSlcbiAgICB9IGVsc2Uge1xuICAgICAgcmV0dXJuIHRvdGFsKCk7XG4gICAgfVxuICB9XG4gIFxuICBoYW5kbGVUb3RhbCgpIHtcbiAgICByZXR1cm4gdG90YWwoKTtcbiAgfVxuXG4gIHJlbmRlcigpIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdiBpZD1cImNvbnRhaW5lclwiPlxuICAgICAgICB7dGhpcy5zdGF0ZS5xdWFsaWZpZXMgPyA8cD5Zb3UndmUgdW5sb2NrZWQgZnJlZSBzaGlwcGluZyE8L3A+IDogPHA+WW91J3JlIG9uIHlvdXIgd2F5IHRvIGZyZWUgc2hpcHBpbmchPC9wPn1cbiAgICAgICAgPGRpdiBpZD1cImJhclwiPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGJyLz5cbiAgICAgICAgPHNwYW4gaWQ9XCJzcGVuZFwiPlxuICAgICAgICB7dGhpcy5zdGF0ZS5xdWFsaWZpZXMgPyAnJDc1JyA6ICckJyArIHRoaXMuaGFuZGxlVG90YWwoKX1cbiAgICAgICAgPC9zcGFuPiBvZiAkNzVcbiAgICAgICAgPGJyLz48YnIvPlxuICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgI2NvbnRhaW5lciB7XG4gICAgICAgICAgICBwYWRkaW5nLXRvcDogNSU7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG59Il19 */\n/*@ sourceURL=/Users/gisellademorais/code/freck-test/components/Cart/FreeShippingBar.jsx */"));
-    }
-  }]);
-
-  return FreeShippingBar;
-}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
-
-
+function FreeShippingBar() {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    id: "container",
+    className: "jsx-1371052099"
+  }, Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_2__["total"])() > 75 ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "jsx-1371052099"
+  }, "You've unlocked free shipping!") : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "jsx-1371052099"
+  }, "You're on your way to free shipping!"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    id: "bar",
+    className: "jsx-1371052099"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+    className: "jsx-1371052099"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    id: "spend",
+    className: "jsx-1371052099"
+  }, Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_2__["total"])() > 75 ? '$75' : '$' + Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_2__["total"])()), " of $75", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+    className: "jsx-1371052099"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+    className: "jsx-1371052099"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "1371052099"
+  }, "#container.jsx-1371052099{padding-top:5%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9naXNlbGxhZGVtb3JhaXMvY29kZS9mcmVjay10ZXN0L2NvbXBvbmVudHMvQ2FydC9GcmVlU2hpcHBpbmdCYXIuanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWFrQixBQUcwQixlQUNqQiIsImZpbGUiOiIvVXNlcnMvZ2lzZWxsYWRlbW9yYWlzL2NvZGUvZnJlY2stdGVzdC9jb21wb25lbnRzL0NhcnQvRnJlZVNoaXBwaW5nQmFyLmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHRvdGFsIH0gZnJvbSAnY2FydC1sb2NhbHN0b3JhZ2UnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBGcmVlU2hpcHBpbmdCYXIoKSB7XG4gIHJldHVybiAoXG4gICAgPGRpdiBpZD1cImNvbnRhaW5lclwiPlxuICAgICAge3RvdGFsKCkgPiA3NSA/IDxwPllvdSd2ZSB1bmxvY2tlZCBmcmVlIHNoaXBwaW5nITwvcD4gOiA8cD5Zb3UncmUgb24geW91ciB3YXkgdG8gZnJlZSBzaGlwcGluZyE8L3A+fVxuICAgICAgPGRpdiBpZD1cImJhclwiPlxuICAgICAgPC9kaXY+XG4gICAgICA8YnIvPlxuICAgICAgPHNwYW4gaWQ9XCJzcGVuZFwiPlxuICAgICAge3RvdGFsKCkgPiA3NSA/ICckNzUnIDogJyQnICsgdG90YWwoKX1cbiAgICAgIDwvc3Bhbj4gb2YgJDc1XG4gICAgICA8YnIvPjxici8+XG4gICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICNjb250YWluZXIge1xuICAgICAgICAgIHBhZGRpbmctdG9wOiA1JTtcbiAgICAgICAgfVxuICAgICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuICApO1xuICBcbn0iXX0= */\n/*@ sourceURL=/Users/gisellademorais/code/freck-test/components/Cart/FreeShippingBar.jsx */"));
+}
 
 /***/ }),
 
