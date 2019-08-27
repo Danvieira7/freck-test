@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { get } from 'cart-localstorage';
+import { list, remove } from 'cart-localstorage';
 
 export default class CartItems extends Component {
   constructor(props) {
@@ -10,10 +10,6 @@ export default class CartItems extends Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log(this.state.decrement);
-  }
-  
   handleDelete = () => {
     this.props.deleteItem();
     this.setState(function(prevState) {
@@ -26,6 +22,7 @@ export default class CartItems extends Component {
   handleDecrement = () => {
     let quantity = this.props.item.quantity;
     if ((quantity - 1) === 0 ) {
+      remove(this.props.item.id);
       this.setState(function(prevState) {
         return {
           deleted: !prevState.deleted,
@@ -33,12 +30,18 @@ export default class CartItems extends Component {
       })
     } else {
       this.props.decrementItem();
+      this.setState({
+        list: list()
+      })
+      console.log(this.props.item.quantity-- - 1);
     }
-    console.log(this.props.item.quantity-- - 1);
   }
 
   handleIncrement = () => {
     this.props.incrementItem();
+    this.setState({
+      list: list()
+    })
     console.log(this.props.item.quantity++ + 1);
   }
 
