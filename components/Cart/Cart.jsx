@@ -32,7 +32,13 @@ export default class Cart extends Component {
     let item = this.item.id;
     update(item, 'quantity', get(item).quantity + 1);
   }
-
+  handleSubTotal = (price) => {
+    let montante = total() + price;
+    this.setState({
+      subtotal: montante
+    }) 
+    console.log(this.state.subtotal)
+  }
   render() {
     let cartItems = this.state.list;
     let subtotal = total();
@@ -55,6 +61,7 @@ export default class Cart extends Component {
                 deleteItem={this.deleteItem}
                 decrementItem={this.decrementItem}
                 incrementItem={this.incrementItem}
+                handleSubTotal={this.handleSubTotal}
               />
             )
           ) : ''}

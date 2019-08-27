@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { list, remove } from 'cart-localstorage';
+import { list, remove, total } from 'cart-localstorage';
 
 export default class CartItems extends Component {
   constructor(props) {
@@ -18,33 +18,37 @@ export default class CartItems extends Component {
       }
     })
   }
-
+  
   handleDecrement = () => {
     let quantity = this.props.item.quantity;
     if ((quantity - 1) === 0 ) {
       remove(this.props.item.id);
       this.setState(function(prevState) {
-        return {
-          deleted: !prevState.deleted,
-        }
-      })
+        return { deleted: !prevState.deleted}
+      });
     } else {
       this.props.decrementItem();
-      this.setState({
-        list: list()
+      this.setState({ 
+        list: list(),
+        subtotal: total() - this.props.item.price
       })
       this.props.item.quantity-- - 1;
     }
+    this.props.handleSubTotal(this.props.item.price)
+    // this.props.item.price
   }
-
+  
   handleIncrement = () => {
     this.props.incrementItem();
     this.setState({
-      list: list()
+      list: list(),
+      subtotal: total() + this.props.item.price
     })
     this.props.item.quantity++ + 1;
+    // this.handleSubTotal(this.props.item.price)
+    this.props.handleSubTotal(this.props.item.price)
   }
-
+  
   render() {
     let { item } = this.props;
     const style = {display: this.state.deleted ? 'none' : 'flex' };
