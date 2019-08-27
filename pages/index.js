@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import fetch from 'isomorphic-unfetch';
-import { add, list } from 'cart-localstorage';
+import { add } from 'cart-localstorage';
 import MainHeader from '../components/Header/MainHeader';
 import MobileFooter from '../components/Footer/MobileFooter';
 import MobileHero from '../components/Shop/MobileHero';
@@ -70,7 +70,6 @@ export default class Index extends Component {
             products.map(
               product =>
               <ProductList
-                {...props}
                 product={product}
                 key={product.id}
                 handleAddToCart={this.handleAddToCart}

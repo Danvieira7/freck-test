@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { total } from 'cart-localstorage';
 
 export default class ProductList extends Component {
 	constructor(props) {

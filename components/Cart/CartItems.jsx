@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
-import { total } from 'cart-localstorage';
+import { get } from 'cart-localstorage';
 
 export default class CartItems extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      deleted: false
+      deleted: false,
+      decrement: this.props.item.price * this.props.item.quantity
     }
   }
-  
-  componentDidUpdate() {
-    console.log('did update: ' + total());
-  }
 
+  componentDidUpdate() {
+    console.log(this.state.decrement);
+  }
+  
   handleDelete = () => {
     this.props.deleteItem();
     this.setState(function(prevState) {
-      return {deleted: !prevState.deleted}
+      return {
+        deleted: !prevState.deleted,
+      }
     })
+  }
+
+  handleDecrement = () => {
+    this.props.decrementItem();
+    console.log(get(this.props.item.id).quantity);
+  }
+
+  handleIncrement = () => {
+    this.props.incrementItem();
+    console.log(get(this.props.item.id).quantity);
   }
 
   render() {
@@ -42,12 +55,18 @@ export default class CartItems extends Component {
             <p className="price"> ${item.price} </p>
           </div>
           <div className="qtyComp">
-            <button>-</button>
+            <button onClick={this.handleDecrement}>-</button>
             {/* <textarea className="input" contenteditable="true">
               
             </textarea> */}
-            <input type="text" min="1" placeholder={item.quantity} />
-            <button>+</button> 
+            <div
+              id="input"
+              type="text"
+              min="1"
+            >
+              {get(item.id).quantity}
+            </div>
+            <button onClick={this.handleIncrement}>+</button> 
           </div>
         <style jsx>{`
           .item {
@@ -66,7 +85,7 @@ export default class CartItems extends Component {
             font-size: 12px;
             font-style: italic;
           }
-          input {
+          #input {
             color: black;
             width: 25px;
             height: 19px;
