@@ -13,6 +13,7 @@ export default class Cart extends Component {
   }
 
   componentDidMount() {
+    console.log('yo', this.state.list);
   }
 
   handleClick = () => {
@@ -29,20 +30,16 @@ export default class Cart extends Component {
   decrementItem() {
     let item = this.item.id;
     let quantity = item.quantity;
-    if (quantity > 1) {
-      quantity-- - 1;
-    } else {
-      remove(item);
-    }
+    update(item, 'quantity', get(item).quantity - 1);
     console.log(item);
-    console.log(this.item);
+    console.log('this is get(item): ', get(item));
   }
 
   incrementItem() {
     let item = this.item.id;
     let quantity = item.quantity;
-    quantity++ + 1;
-    console.log(this.item);
+    update(item, 'quantity', get(item).quantity + 1);
+    console.log('this is get(item): ', get(item));
   }
 
   render() {

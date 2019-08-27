@@ -24,7 +24,16 @@ export default class CartItems extends Component {
   }
 
   handleDecrement = () => {
-    this.props.decrementItem();
+    let quantity = this.props.item.quantity;
+    if (quantity === 0 ) {
+      this.setState(function(prevState) {
+        return {
+          deleted: !prevState.deleted,
+        }
+      })
+    } else {
+      this.props.decrementItem();
+    }
     console.log(this.props.item.quantity-- - 1);
   }
 
