@@ -234,8 +234,12 @@ function (_Component) {
         list: Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_9__["list"])(),
         subtotal: Object(cart_localstorage__WEBPACK_IMPORTED_MODULE_9__["total"])() + _this.props.item.price
       });
+<<<<<<< HEAD
 
       _this.props.item.quantity++ + 1;
+=======
+      _this.props.item.quantity++ + 1; // this.handleSubTotal(this.props.item.price)
+>>>>>>> master
 
       _this.props.handleSubTotal(_this.props.item.price);
     });
