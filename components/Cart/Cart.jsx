@@ -14,6 +14,7 @@ export default class Cart extends Component {
 
   componentDidMount(){
     console.log("Subtotal", this.state.subtotal)
+    console.log(list());
   }
 
   handleClick = () => {

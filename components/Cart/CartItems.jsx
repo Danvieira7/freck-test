@@ -105,6 +105,8 @@ export default class CartItems extends Component {
             border: #BAB9B3 2px solid;
             text-align: center;
             margin-top: -35px;
+            font-size: 12px;
+            padding-top: 1px;
           }
           input:focus{
             outline: none;
