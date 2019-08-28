@@ -3,6 +3,7 @@ import { list, total, remove, destroy, update, get } from 'cart-localstorage';
 import FreeShippingBar from './FreeShippingBar';
 import CartItems from './CartItems';
 import Coupon from './Coupon';
+import CheckoutBtn from './CheckoutBtn';
 
 export default class Cart extends Component {
   constructor(props) {
@@ -50,6 +51,9 @@ export default class Cart extends Component {
     }) 
     console.log("total", total())
   }
+  handleCheckout = () =>{
+    console.log("hello");
+  }
 
   render() {
     let cartItems = this.state.list;
@@ -85,6 +89,7 @@ export default class Cart extends Component {
           <br/>
           <br/>
           <Coupon />
+          <CheckoutBtn handleCheckout = {this.handleCheckout}/>
         </div>
         <style jsx>{`
           #modal {
