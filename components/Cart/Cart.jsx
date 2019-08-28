@@ -2,19 +2,26 @@ import React, { Component } from 'react';
 import { list, total, remove, destroy, update, get } from 'cart-localstorage';
 import FreeShippingBar from './FreeShippingBar';
 import CartItems from './CartItems';
+import Coupon from './Coupon';
 
 export default class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
       list: list(),
-      subtotal: null
+      subtotal: null,
+      coupon: ''
     }
   }
 
-  componentDidMount(){
+  componentDidUpdate(){
     console.log("Subtotal", this.state.subtotal)
     console.log(list());
+    // test works for two products only
+    let firstItem = list().length -2;
+    let lastItem = list().length -1;
+    let quantity = list()[firstItem].quantity + list()[lastItem].quantity;
+    console.log(quantity);
   }
 
   handleClick = () => {
@@ -50,6 +57,7 @@ export default class Cart extends Component {
     return (
       <div id="modal">
         <div id="cart">
+          <div></div>
           {/* DO NOT DELETE THE NEXT TWO LINES! For dev purposes only. */}
           <button onClick={destroy}>destroy</button>&nbsp;&nbsp;&nbsp;&nbsp;
           <button onClick={this.handleClick}>close</button>
@@ -76,6 +84,7 @@ export default class Cart extends Component {
           <br/>
           <br/>
           <br/>
+          <Coupon />
         </div>
         <style jsx>{`
           #modal {

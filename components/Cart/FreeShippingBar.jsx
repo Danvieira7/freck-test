@@ -2,7 +2,7 @@ import { total } from 'cart-localstorage';
 
 export default function FreeShippingBar() {
   let style = {
-    width: total() * 4 + 'px'
+    width: total() * 3 + 'px'
   };
   return (
     <div id="container">
@@ -28,7 +28,7 @@ export default function FreeShippingBar() {
           font-weight: 545;
         }
         #bar {
-          width: 300px;
+          width: 225px;
           height: 12.5px;
           background-color: #E5D9C9;
           margin: 0 auto;
@@ -37,7 +37,7 @@ export default function FreeShippingBar() {
         }
         #fill {
           height: 100%;
-          max-width: 300px;
+          max-width: 225px;
           background-color: #A73E24;
           border-radius: 20px;
         }
